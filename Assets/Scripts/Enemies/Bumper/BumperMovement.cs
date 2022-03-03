@@ -8,7 +8,9 @@ public class BumperMovement : MonoBehaviour
     public PlayerMovement playerController;
     public CharacterController enemyController;
     public float bumperSpeed = 3f;
-    public float bumperAttackSpeed = 1.5f;
+    public float bumperAttackSpeed = 0.5f;
+    public float bumperDamage = 15;
+
     private float nextAttack = 0f;
 
     void Start()
@@ -29,12 +31,12 @@ public class BumperMovement : MonoBehaviour
         {
             nextAttack -= Time.deltaTime;
         }
-        if (Vector3.Distance(transform.position, player.transform.position) <= 2 && nextAttack <= 0)
+        if (Vector3.Distance(transform.position, player.transform.position) <= 2.1 && nextAttack <= 0)
         {
             nextAttack = bumperAttackSpeed;
-            playerController.PlayerDamage();
+            player.PlayerDamage(bumperDamage);
             playerController.PlayerKnockback(gameObject.transform);
         }
-        Debug.Log(Vector3.Distance(transform.position, player.transform.position));
+        transform.position = new Vector3(transform.position.x, 0.25f, transform.position.z);
     }
 }

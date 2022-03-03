@@ -24,10 +24,11 @@ public class BulletScript : MonoBehaviour
     }
     void OnCollisionEnter(Collision coll)
     {
-        if(coll.gameObject.tag != "Player")
+        Destroy(gameObject);
+        if(coll.gameObject.tag == "Enemy")
         {
-            Debug.Log("Collision with" + coll.gameObject.name);
-            Destroy(gameObject);
+            Enemy enemy = coll.gameObject.GetComponentInParent<Enemy>();
+            enemy.Damage(player.playerDamage);
         }
     }
 }

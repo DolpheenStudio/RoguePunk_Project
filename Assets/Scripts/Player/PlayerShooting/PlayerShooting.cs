@@ -23,7 +23,6 @@ public class PlayerShooting : MonoBehaviour
     {
         nextFire = Time.time + player.playerAttackSpeed;
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Debug.Log(firePoint.position);
 
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         rb.AddForce(firePoint.forward * player.playerBulletSpeed, ForceMode.VelocityChange);

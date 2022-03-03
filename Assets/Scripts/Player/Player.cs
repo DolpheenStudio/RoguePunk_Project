@@ -8,16 +8,31 @@ public class Player : MonoBehaviour
     public float playerRange = 10f;
     public float playerBulletSpeed = 15f;
     public float playerAttackSpeed = 1f;
-    float currentPlayerHealth = 0f;
+    public float currentPlayerHealth = 0f;
+    public float playerDamage = 10;
 
     void Start()
     {
         currentPlayerHealth = maxPlayerHealth;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if(currentPlayerHealth <= 0)
+        {
+            Death();
+        }
+    }
+
+    public void PlayerDamage(float damage)
+    {
+        currentPlayerHealth -= damage;
+
+    }
+
+    void Death()
+    {
+        currentPlayerHealth = maxPlayerHealth;
+        Debug.Log("PLAYER IS DEAD");
     }
 }

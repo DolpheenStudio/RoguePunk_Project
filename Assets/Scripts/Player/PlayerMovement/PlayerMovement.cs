@@ -7,19 +7,33 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controller;
     public GameObject PlayerTransform;
     public Transform cam;
+    public Material damageMaterial;
+    public Material standardMaterial;
 
     public float playerSpeed = 6f;
     public float knockBackForce = 2f;
     public float knockBackTime = 0.5f;
     private float knockBackCounter;
-    private Vector3 knockBackDirection;
 
+    private Vector3 knockBackDirection;
     private Vector3 moveDir;
+
+    void Start()
+    {
+        foreach (MeshRenderer render in GetComponentsInChildren<MeshRenderer>())
+        {
+            if (render.name != "CursorModel") render.material = standardMaterial;
+        }
+    }
 
     void Update()
     {
         if (knockBackCounter <= 0)
         {
+            foreach (MeshRenderer render in GetComponentsInChildren<MeshRenderer>())
+            {
+                if (render.name != "CursorModel") render.material = standardMaterial;
+            }
             float horizontal = Input.GetAxisRaw("Horizontal");
             float vertical = Input.GetAxisRaw("Vertical");
             Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
@@ -37,18 +51,15 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            foreach(MeshRenderer render in GetComponentsInChildren<MeshRenderer>())
+            {
+                if (render.name != "CursorModel") render.material = damageMaterial;
+            }
             controller.Move(knockBackDirection * knockBackForce * knockBackCounter);
             knockBackCounter -= Time.deltaTime;
-            /*PlayerTransform.transform.position = new Vector3(PlayerTransform.transform.position.x, 0f, PlayerTransform.transform.position.z);
-            knockBackCounter -= Time.deltaTime;
-            PlayerTransform.transform.position = Vector3.Lerp(PlayerTransform.transform.position, PlayerTransform.transform.position + knockBackDirection * knockBackForce, knockBackCounter);*/
         }
     }
 
-    public void PlayerDamage()
-    {
-
-    }
     public void PlayerKnockback(Transform enemy)
     {
         knockBackDirection = enemy.forward.normalized;
