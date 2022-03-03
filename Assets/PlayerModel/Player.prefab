@@ -1377,7 +1377,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fieldPrefab: {fileID: 748095033293599870, guid: e0696358fd84d3d4bb964e8569fcdf70, type: 3}
   wallPrefab: {fileID: 1317652111213218213, guid: 52db4cf9751add24080ab7ddde707dfd, type: 3}
+  itemSlotPrefab: {fileID: 8970787512906426480, guid: 44694dd3743f951429a830e4cee0c036, type: 3}
   bumperPrefab: {fileID: 6796974802007014861, guid: f0dcef23c5ba1de46bdd911d0c5e4541, type: 3}
+  izzyPrefab: {fileID: 3095115781933069251, guid: caa9b85a07cca884ea92dd1b5b5c6c96, type: 3}
 --- !u!114 &6813296550896937664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1429,11 +1431,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxPlayerHealth: 100
-  playerRange: 10
+  playerRange: 5
   playerBulletSpeed: 15
   playerAttackSpeed: 1
   currentPlayerHealth: 0
   playerDamage: 10
+  playerDoubleShot: 1
 --- !u!65 &6813296550896937671
 BoxCollider:
   m_ObjectHideFlags: 0

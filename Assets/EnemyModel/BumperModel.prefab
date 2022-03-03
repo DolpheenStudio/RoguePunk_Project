@@ -628,8 +628,6 @@ MonoBehaviour:
   playerController: {fileID: 0}
   enemyController: {fileID: 0}
   bumperSpeed: 2.5
-  bumperAttackSpeed: 0.5
-  bumperDamage: 15
 --- !u!143 &6796974802007014863
 CharacterController:
   m_ObjectHideFlags: 0
@@ -692,6 +690,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxEnemyHealth: 50
   currentEnemyHealth: 0
+  enemyDamage: 15
+  enemyAttackSpeed: 0.5
   standardMaterial: {fileID: 2100000, guid: 35902c9f423301145995e265767083ab, type: 2}
   damageMaterial: {fileID: 2100000, guid: d9f072a575dc84e4c80d787891d670b4, type: 2}
 --- !u!1 &6929903870402268828

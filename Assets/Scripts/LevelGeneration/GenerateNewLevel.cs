@@ -35,7 +35,7 @@ public class GenerateNewLevel : MonoBehaviour
                     {
                         generatedFieldsArray[x + 1, z] = 1;
                         generatedFields++;
-                        generateField.GenerateSquare((float)x + 1, (float)z);
+                        generateField.GenerateSquare((float)x + 1, (float)z, generatedFields);
 
                         if(x + 1 > startX)
                         {
@@ -51,7 +51,7 @@ public class GenerateNewLevel : MonoBehaviour
                     {
                         generatedFieldsArray[x, z + 1] = 1;
                         generatedFields++;
-                        generateField.GenerateSquare((float)x, (float)z + 1);
+                        generateField.GenerateSquare((float)x, (float)z + 1, generatedFields);
                     }
                     z += 1;
                     break;
@@ -61,7 +61,7 @@ public class GenerateNewLevel : MonoBehaviour
                     {
                         generatedFieldsArray[x - 1, z] = 1;
                         generatedFields++;
-                        generateField.GenerateSquare((float)x - 1, (float)z);
+                        generateField.GenerateSquare((float)x - 1, (float)z, generatedFields);
 
                         if (x + 1 > startX)
                         {
@@ -77,7 +77,7 @@ public class GenerateNewLevel : MonoBehaviour
                     {
                         generatedFieldsArray[x, z - 1] = 1;
                         generatedFields++;
-                        generateField.GenerateSquare((float)x, (float)z - 1);
+                        generateField.GenerateSquare((float)x, (float)z - 1, generatedFields);
                     }
                     z -= 1;
                     break;

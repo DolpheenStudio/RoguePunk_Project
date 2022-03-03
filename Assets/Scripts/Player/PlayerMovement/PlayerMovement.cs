@@ -11,8 +11,8 @@ public class PlayerMovement : MonoBehaviour
     public Material standardMaterial;
 
     public float playerSpeed = 6f;
-    public float knockBackForce = 2f;
-    public float knockBackTime = 0.5f;
+    public float knockBackForce;
+    public float knockBackTime = 0.3f;
     private float knockBackCounter;
 
     private Vector3 knockBackDirection;
@@ -60,9 +60,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void PlayerKnockback(Transform enemy)
+    public void PlayerKnockback(Transform enemy, float enemyKnockbackForce)
     {
-        knockBackDirection = enemy.forward.normalized;
+        knockBackDirection = Vector3.Scale(enemy.forward.normalized, new Vector3(1, 0, 1));
         knockBackCounter = knockBackTime;
+        knockBackForce = enemyKnockbackForce;
     }
 }

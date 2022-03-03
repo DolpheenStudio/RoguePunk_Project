@@ -228,8 +228,12 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6813296550896937670, guid: 4aba56aa8f7582b4dad4ca13ad3d6565, type: 3}
-      propertyPath: playerDamage
+      propertyPath: playerRange
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6813296550896937670, guid: 4aba56aa8f7582b4dad4ca13ad3d6565, type: 3}
+      propertyPath: playerDamage
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6813296550896937677, guid: 4aba56aa8f7582b4dad4ca13ad3d6565, type: 3}
       propertyPath: m_RootOrder

@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
 {
     public float maxEnemyHealth = 50;
     public float currentEnemyHealth;
+    public float enemyDamage;
+    public float enemyAttackSpeed;
     public Material standardMaterial;
     public Material damageMaterial;
 
