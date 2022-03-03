@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4311201276648149889}
   - component: {fileID: 568755555077425054}
   - component: {fileID: 2967710399661098487}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 994140835695587381}
   - component: {fileID: 7588476238482207477}
   - component: {fileID: 3632663166200498782}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 6323781598706222351}
   - component: {fileID: -7410221535070277706}
   - component: {fileID: 4638294884141620887}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ScrapBulletModel
   m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
@@ -239,7 +239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cebd2effe8f8d834fb837eaa405493b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 10
 --- !u!1 &7129487656441818340
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +250,7 @@ GameObject:
   - component: {fileID: 896947692233767125}
   - component: {fileID: 1887079943759616673}
   - component: {fileID: 3727774447878640699}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

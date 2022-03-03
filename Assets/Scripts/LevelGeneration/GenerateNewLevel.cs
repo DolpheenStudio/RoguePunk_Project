@@ -106,6 +106,6 @@ public class GenerateNewLevel : MonoBehaviour
             startX--;
             startZ--;
         }
-        player.transform.position = new Vector3((float)startX*10, 0, (float)startZ*10);
+        player.transform.position = new Vector3((float)startX * 5, 0, (float)startZ * 5);
     }
 }

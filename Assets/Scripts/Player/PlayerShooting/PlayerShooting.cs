@@ -16,14 +16,16 @@ public class PlayerShooting : MonoBehaviour
         {
             Shoot();
         }
+        Vector3 forward = firePoint.TransformDirection(Vector3.forward * 10);
     }
 
     void Shoot()
     {
         nextFire = Time.time + player.playerAttackSpeed;
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Debug.Log(firePoint.position);
 
-        Rigidbody rb = bullet.GetComponent < Rigidbody >();
+        Rigidbody rb = bullet.GetComponent<Rigidbody>();
         rb.AddForce(firePoint.forward * player.playerBulletSpeed, ForceMode.VelocityChange);
     }
 }

@@ -11,7 +11,6 @@ public class PlayerUpperBodyAngle : MonoBehaviour
     }
     void Update()
     {
-        Vector3 cursorPos = cursor.transform.position;
-        transform.LookAt(cursorPos);
+        transform.LookAt(cursor.transform);
     }
 }
