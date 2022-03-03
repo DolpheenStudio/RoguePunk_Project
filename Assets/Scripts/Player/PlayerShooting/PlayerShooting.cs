@@ -15,8 +15,15 @@ public class PlayerShooting : MonoBehaviour
         if (Input.GetButton("Fire1") && Time.time > nextFire)
         {
             Shoot();
+            if(player.playerDoubleShot) StartCoroutine(DoubleShot());
         }
         Vector3 forward = firePoint.TransformDirection(Vector3.forward * 10);
+    }
+
+    IEnumerator DoubleShot()
+    {
+        yield return new WaitForSeconds(0.15f);
+        Shoot();
     }
 
     void Shoot()

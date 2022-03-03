@@ -5,11 +5,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float maxPlayerHealth = 100f;
-    public float playerRange = 10f;
+    public float playerRange = 5f;
     public float playerBulletSpeed = 15f;
     public float playerAttackSpeed = 1f;
     public float currentPlayerHealth = 0f;
     public float playerDamage = 10;
+    public bool playerDoubleShot = false;
 
     void Start()
     {
