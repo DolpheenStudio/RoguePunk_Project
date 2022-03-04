@@ -11,9 +11,13 @@ public class Player : MonoBehaviour
     public float currentPlayerHealth = 0f;
     public float playerDamage = 10;
     public bool playerDoubleShot = false;
+    public bool playerLevelReload = true;
+
+    private EndTeleport endTeleport;
 
     void Start()
     {
+        endTeleport = FindObjectOfType<EndTeleport>();
         currentPlayerHealth = maxPlayerHealth;
     }
 
@@ -22,6 +26,10 @@ public class Player : MonoBehaviour
         if(currentPlayerHealth <= 0)
         {
             Death();
+        }
+        if(Input.GetKey(KeyCode.R))
+        {
+            endTeleport.Portal();
         }
     }
 

@@ -10,7 +10,7 @@ public class EndTeleport : MonoBehaviour
     void Start()
     {
         transform.rotation = Quaternion.Euler(-90f, transform.rotation.y, transform.rotation.z);
-        player = FindObjectOfType<Player>();    
+        player = FindObjectOfType<Player>();
     }
 
     void Update()
@@ -23,7 +23,6 @@ public class EndTeleport : MonoBehaviour
 
     public void Portal()
     {
-        Debug.Log("Entering Portal");
         SceneManager.LoadScene("GeneratedLevel", LoadSceneMode.Single);
     }
 }

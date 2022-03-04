@@ -17,7 +17,7 @@ public class GenerateNewLevel : MonoBehaviour
     int[,] generatedFieldsArray = new int[200, 200];
 
     public GenerateField generateField;
-    public GameObject player;
+    public Player playerPrefab;
 
     void Start()
     {
@@ -106,7 +106,7 @@ public class GenerateNewLevel : MonoBehaviour
             startX--;
             startZ--;
         }
-        player.transform.position = new Vector3((float)startX * 5, 0, (float)startZ * 5);
+        Instantiate(playerPrefab, new Vector3((float)startX * 5, 0, (float)startZ * 5), Quaternion.Euler(0f, 0f, 0f));
         generateField.GenerateEnd(endX-2, endZ);
     }
 }
