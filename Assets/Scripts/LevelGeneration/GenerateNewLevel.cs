@@ -6,11 +6,11 @@ public class GenerateNewLevel : MonoBehaviour
 {
     public int worldSize;
     int x = 100;
-    int startX = 100;
-    int endX = 100;
+    int startX = 0;
+    int startZ;
     int z = 100;
-    int startZ = 100;
-    int endZ = 100;
+    int endX = 200;
+    int endZ;
     int direction = 0;
     int lastDirection = 2;
     int generatedFields = 0;
@@ -29,7 +29,7 @@ public class GenerateNewLevel : MonoBehaviour
             } while (direction + lastDirection % 2 == 0);
             switch(direction)
             {
-                case 1: //downwards
+                case 1: //upwards
                     if(x + 2 > 199) break;
                     if(generatedFieldsArray[x + 1, z] != 1)
                     {
@@ -55,7 +55,7 @@ public class GenerateNewLevel : MonoBehaviour
                     }
                     z += 1;
                     break;
-                case 3: //upwards
+                case 3: //downwards
                     if (x - 2 < 0) break;
                     if (generatedFieldsArray[x - 1, z] != 1)
                     {
@@ -63,7 +63,7 @@ public class GenerateNewLevel : MonoBehaviour
                         generatedFields++;
                         generateField.GenerateSquare((float)x - 1, (float)z, generatedFields);
 
-                        if (x + 1 > startX)
+                        if (x - 1 < endX)
                         {
                             endX = x + 1;
                             endZ = z;
@@ -107,5 +107,6 @@ public class GenerateNewLevel : MonoBehaviour
             startZ--;
         }
         player.transform.position = new Vector3((float)startX * 5, 0, (float)startZ * 5);
+        generateField.GenerateEnd(endX-2, endZ);
     }
 }

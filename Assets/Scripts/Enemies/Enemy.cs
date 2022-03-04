@@ -11,11 +11,17 @@ public class Enemy : MonoBehaviour
     public Material standardMaterial;
     public Material damageMaterial;
 
+    private Player player;
     private float isDamageMaterial = 0f;
 
     void Start()
     {
+        player = FindObjectOfType<Player>();
         currentEnemyHealth = maxEnemyHealth;
+        if(Vector3.Distance(transform.position, player.transform.position) <= 30)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Update()

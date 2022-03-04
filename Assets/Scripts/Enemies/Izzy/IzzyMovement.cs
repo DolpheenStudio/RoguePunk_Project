@@ -7,12 +7,14 @@ public class IzzyMovement : MonoBehaviour
     public Player player;
     public GameObject izzyBulletPrefab;
     public Transform shootingPoint;
-    public float izzyAttackSpeed = 1f;
-    public float izzyAttackCooldown = 0f;
     public float izzyBulletSpeed = 1f;
+
+    private Enemy enemy;
+    private float izzyAttackCooldown = 0f;
 
     void Start()
     {
+        enemy = gameObject.GetComponent<Enemy>();
         player = FindObjectOfType<Player>();
     }
 
@@ -23,7 +25,7 @@ public class IzzyMovement : MonoBehaviour
         {
             if (izzyAttackCooldown <= 0)
             {
-                izzyAttackCooldown = izzyAttackSpeed;
+                izzyAttackCooldown = enemy.enemyAttackSpeed;
                 Shoot();
             }
             else izzyAttackCooldown -= Time.deltaTime;

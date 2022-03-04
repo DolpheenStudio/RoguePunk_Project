@@ -582,7 +582,7 @@ GameObject:
   - component: {fileID: 6796974802007014862}
   - component: {fileID: 6796974802007014848}
   m_Layer: 8
-  m_Name: BumperModel
+  m_Name: BumperPrefab
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

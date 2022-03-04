@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 6149197327093433641}
   - component: {fileID: -32878570773106478}
   m_Layer: 8
-  m_Name: IzzyModel
+  m_Name: IzzyPrefab
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
