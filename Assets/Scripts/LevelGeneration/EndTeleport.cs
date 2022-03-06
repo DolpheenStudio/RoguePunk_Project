@@ -23,6 +23,7 @@ public class EndTeleport : MonoBehaviour
 
     public void Portal()
     {
+        PlayerUpgrade.SetPlayerCurrentHealth(player.currentPlayerHealth);
         SceneManager.LoadScene("GeneratedLevel", LoadSceneMode.Single);
     }
 }

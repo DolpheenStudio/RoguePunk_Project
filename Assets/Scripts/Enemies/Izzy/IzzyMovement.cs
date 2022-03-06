@@ -8,6 +8,7 @@ public class IzzyMovement : MonoBehaviour
     public GameObject izzyBulletPrefab;
     public Transform shootingPoint;
     public float izzyBulletSpeed = 1f;
+    public float izzyAttackSpeed = 1.5f;
 
     private Enemy enemy;
     private float izzyAttackCooldown = 0f;
@@ -25,7 +26,7 @@ public class IzzyMovement : MonoBehaviour
         {
             if (izzyAttackCooldown <= 0)
             {
-                izzyAttackCooldown = enemy.enemyAttackSpeed;
+                izzyAttackCooldown = izzyAttackSpeed;
                 Shoot();
             }
             else izzyAttackCooldown -= Time.deltaTime;

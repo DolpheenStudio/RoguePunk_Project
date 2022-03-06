@@ -18,10 +18,10 @@ public class Enemy : MonoBehaviour
     {
         player = FindObjectOfType<Player>();
         currentEnemyHealth = maxEnemyHealth;
-        if(Vector3.Distance(transform.position, player.transform.position) <= 30)
+        /*if(Vector3.Distance(transform.position, player.transform.position) <= 30)
         {
             Destroy(gameObject);
-        }
+        }*/
     }
 
     void Update()
@@ -50,7 +50,7 @@ public class Enemy : MonoBehaviour
     public void Damage(float playerDamage)
     {
         currentEnemyHealth -= playerDamage;
-        isDamageMaterial = 0.1f;
+        isDamageMaterial = 0.05f;
     }
 
     void Death()

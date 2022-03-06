@@ -26,7 +26,7 @@ public class FirstAid : MonoBehaviour
             {
                 player.currentPlayerHealth += healingValue;
             }
-            else player.currentPlayerHealth = 100;
+            else player.currentPlayerHealth = player.maxPlayerHealth;
         }
     }
 }

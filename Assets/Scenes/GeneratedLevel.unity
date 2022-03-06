@@ -254,6 +254,13 @@ MonoBehaviour:
   izzyPrefab: {fileID: 3095115781933069251, guid: caa9b85a07cca884ea92dd1b5b5c6c96, type: 3}
   blinkyPrefab: {fileID: 6287972610928124196, guid: 9b9a42a0c54b2774dbe26585e5db5306, type: 3}
   firstAidPrefab: {fileID: 8352195005490947006, guid: c5bb7d7c2f649f241966a08fe472947a, type: 3}
+  bonusAttackSpeedPrefab: {fileID: 4932051488844677964, guid: 14fa0c3500cfd6b40a6d7f82957c9c50, type: 3}
+  bonusBulletSpeedPrefab: {fileID: 975826508321070182, guid: 422071fae2f901b46991f4fb4a741dd6, type: 3}
+  bonusDamagePrefab: {fileID: 5377950583802838494, guid: becffceb635f838478640d06ed100f34, type: 3}
+  bonusHealthPrefab: {fileID: 120642050211605421, guid: 25d68b7129e52ff4bac49520dbd8d168, type: 3}
+  bonusEmptyHealthPrefab: {fileID: 9007274307208817853, guid: d789a8591dad2db4eb53acb236903402, type: 3}
+  bonusRangePrefab: {fileID: 2289989307100755822, guid: 935eb74b9fb347543a0e20846e8b19c6, type: 3}
+  bonusDoubleShotPrefab: {fileID: 1064297213210519177, guid: 37637ae830f51aa47891fb054202c34f, type: 3}
 --- !u!114 &2000391650
 MonoBehaviour:
   m_ObjectHideFlags: 0

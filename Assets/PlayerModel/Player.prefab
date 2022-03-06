@@ -1317,12 +1317,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPlayerHealth: 100
   playerRange: 5
-  playerBulletSpeed: 15
+  playerBulletSpeed: 10
   playerAttackSpeed: 1
   currentPlayerHealth: 0
   playerDamage: 10
   playerDoubleShot: 0
   playerLevelReload: 1
+  maxPlayerHealthBase: 100
+  playerRangeBase: 5
+  playerBulletSpeedBase: 10
+  playerAttackSpeedBase: 1
+  playerDamageBase: 10
 --- !u!65 &6813296550896937671
 BoxCollider:
   m_ObjectHideFlags: 0

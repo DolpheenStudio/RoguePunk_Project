@@ -8,11 +8,11 @@ public class IzzyBulletScript : MonoBehaviour
     public Player player;
     public PlayerMovement playerController;
 
-    private Enemy enemy;
+    public float izzyDamage = 5f;
+
 
     void Start()
     {
-        enemy = FindObjectOfType<Enemy>();
         player = FindObjectOfType<Player>();
         playerController = FindObjectOfType<PlayerMovement>();
     }
@@ -25,10 +25,11 @@ public class IzzyBulletScript : MonoBehaviour
     void OnCollisionEnter(Collision coll)
     {
         Destroy(gameObject);
-        if (coll.gameObject.tag == "Player")
+        if (coll.gameObject.tag == "Player" && player.playerDamageCooldown <= 0)
         {
-            player.PlayerDamage(enemy.enemyDamage);
-            playerController.PlayerKnockback(transform, 0.2f);
+            Debug.Log("Damage dealt: " + izzyDamage);
+            player.PlayerDamage(izzyDamage);
+            playerController.PlayerKnockback(transform, 0.05f);
         }
     }
 }

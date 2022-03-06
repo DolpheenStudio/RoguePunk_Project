@@ -7,17 +7,17 @@ public class BlinkyMovement : MonoBehaviour
     public Player player;
     public PlayerMovement playerController;
     public float blinkyDashForce = 5f;
+    public float blinkyAttackSpeed = 4f;
+    public float blinkyDamage = 10f;
 
     private bool damageCooldown = true;
     private bool damageDealt = false;
     private float blinkyAttackCooldown = 0f;
-    private Enemy enemy;
     private CharacterController enemyController;
 
     void Start()
     {
         enemyController = gameObject.GetComponent<CharacterController>();
-        enemy = gameObject.GetComponent<Enemy>();
         player = FindObjectOfType<Player>();
         playerController = FindObjectOfType<PlayerMovement>();
     }
@@ -28,7 +28,7 @@ public class BlinkyMovement : MonoBehaviour
         {
             if (blinkyAttackCooldown <= 0)
             {
-                blinkyAttackCooldown = enemy.enemyAttackSpeed;
+                blinkyAttackCooldown = blinkyAttackSpeed;
                 damageDealt = false;
             }
             else if (blinkyAttackCooldown >= 0 && blinkyAttackCooldown <= 2)
@@ -46,9 +46,9 @@ public class BlinkyMovement : MonoBehaviour
                 damageCooldown = false;
             }
         }
-        if (Vector3.Distance(transform.position, player.transform.position) <= 2.1 && damageCooldown == true)
+        if (Vector3.Distance(transform.position, player.transform.position) <= 2.1 && damageCooldown == true && player.playerDamageCooldown <= 0)
         {
-            player.PlayerDamage(enemy.enemyDamage);
+            player.PlayerDamage(blinkyDamage);
             playerController.PlayerKnockback(transform, 0.5f);
             damageDealt = true;
         }
