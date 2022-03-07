@@ -35,7 +35,6 @@ public class GenerateNewLevel : MonoBehaviour
                     {
                         generatedFieldsArray[x + 1, z] = 1;
                         generatedFields++;
-                        generateField.GenerateSquare((float)x + 1, (float)z, generatedFields);
 
                         if(x + 1 > startX)
                         {
@@ -51,7 +50,6 @@ public class GenerateNewLevel : MonoBehaviour
                     {
                         generatedFieldsArray[x, z + 1] = 1;
                         generatedFields++;
-                        generateField.GenerateSquare((float)x, (float)z + 1, generatedFields);
                     }
                     z += 1;
                     break;
@@ -61,7 +59,6 @@ public class GenerateNewLevel : MonoBehaviour
                     {
                         generatedFieldsArray[x - 1, z] = 1;
                         generatedFields++;
-                        generateField.GenerateSquare((float)x - 1, (float)z, generatedFields);
 
                         if (x - 1 < endX)
                         {
@@ -77,19 +74,28 @@ public class GenerateNewLevel : MonoBehaviour
                     {
                         generatedFieldsArray[x, z - 1] = 1;
                         generatedFields++;
-                        generateField.GenerateSquare((float)x, (float)z - 1, generatedFields);
                     }
                     z -= 1;
                     break;
             }
             lastDirection = direction;
         }
+        if(generatedFieldsArray[startX, startZ] != 1)
+        {
+            startX--;
+            startZ--;
+        }
+        Instantiate(playerPrefab, new Vector3((float)startX * 5, 0, (float)startZ * 5), Quaternion.Euler(0f, 0f, 0f));
+        generateField.GenerateEnd(endX-2, endZ);
+        generatedFields = 0;
         for(int x = 1; x < 199; x++)
         {
             for(int z = 1; z < 199; z++)
             {
                 if (generatedFieldsArray[x, z] == 1)
                 {
+                    generateField.GenerateSquare((float)x, (float)z, generatedFields);
+                    generatedFields++;
                     if (generatedFieldsArray[x - 1, z] != 1) generateField.GenerateWall((float)x - 1, (float)z);
                     if (generatedFieldsArray[x - 1, z + 1] != 1) generateField.GenerateWall((float)x - 1, (float)z + 1);
                     if (generatedFieldsArray[x - 1, z - 1] != 1) generateField.GenerateWall((float)x - 1, (float)z - 1);
@@ -101,12 +107,5 @@ public class GenerateNewLevel : MonoBehaviour
                 }
             }
         }
-        if(generatedFieldsArray[startX, startZ] != 1)
-        {
-            startX--;
-            startZ--;
-        }
-        Instantiate(playerPrefab, new Vector3((float)startX * 5, 0, (float)startZ * 5), Quaternion.Euler(0f, 0f, 0f));
-        generateField.GenerateEnd(endX-2, endZ);
     }
 }

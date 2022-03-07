@@ -19,7 +19,7 @@ public class IzzyMovement : MonoBehaviour
         player = FindObjectOfType<Player>();
     }
 
-    void Update()
+    void LateUpdate()
     {
         shootingPoint.transform.LookAt(new Vector3(player.transform.position.x, player.transform.position.y + 0.8f, player.transform.position.z));
         if (Vector3.Distance(transform.position, player.transform.position) <= 10)

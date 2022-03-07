@@ -22,7 +22,7 @@ public class BlinkyMovement : MonoBehaviour
         playerController = FindObjectOfType<PlayerMovement>();
     }
 
-    void Update()
+    void LateUpdate()
     {   
         if (Vector3.Distance(transform.position, player.transform.position) <= 10) 
         {
@@ -46,10 +46,10 @@ public class BlinkyMovement : MonoBehaviour
                 damageCooldown = false;
             }
         }
-        if (Vector3.Distance(transform.position, player.transform.position) <= 2.1 && damageCooldown == true && player.playerDamageCooldown <= 0)
+        if (Vector3.Distance(transform.position, player.transform.position) <= 1.5 && damageCooldown == true && player.playerDamageCooldown <= 0)
         {
             player.PlayerDamage(blinkyDamage);
-            playerController.PlayerKnockback(transform, 0.5f);
+            playerController.PlayerKnockback(transform, 0.2f);
             damageDealt = true;
         }
         transform.position = new Vector3(transform.position.x, 0.2f, transform.position.z);

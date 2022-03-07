@@ -21,50 +21,63 @@ public class GenerateField : MonoBehaviour
     public GameObject bonusDoubleShotPrefab;
     public GameObject allStatsUpPrefab;
 
+    private bool itemSpawned = false;
+
     public void GenerateSquare(float squareX, float squareZ, int generatedSquares)
     {
-        if(generatedSquares == 500)
+        if(generatedSquares == 100)
         {
             Instantiate(itemSlotPrefab, new Vector3(squareX * 5, 0f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
-            if(Random.value > 0.85) 
+            while (itemSpawned == false)
             {
-                Debug.Log("Item: AttackSpeed");
-                Instantiate(bonusAttackSpeedPrefab, new Vector3(squareX * 5, 1.5f, squareZ * 5), Quaternion.Euler(90f, 0f, 0f));
-            }
-            else if(Random.value > 0.85) 
-            {
-                Debug.Log("Item: BulletSpeed");
-                Instantiate(bonusBulletSpeedPrefab, new Vector3(squareX * 5, 1.5f, squareZ * 5), Quaternion.Euler(90f, 0f, 0f));
-            }
-            else if(Random.value > 0.85) 
-            {
-                Debug.Log("Item: Damage");
-                Instantiate(bonusDamagePrefab, new Vector3(squareX * 5, 1.5f, squareZ * 5), Quaternion.Euler(90f, 0f, 0f));
-            }
-            else if(Random.value > 0.85) 
-            {
-                Debug.Log("Item: EmptyHealth");
-                Instantiate(bonusEmptyHealthPrefab, new Vector3(squareX * 5, 1.5f, squareZ * 5), Quaternion.Euler(90f, 0f, 0f));
-            }
-            else if(Random.value > 0.85) 
-            {
-                Debug.Log("Item: Health");
-                Instantiate(bonusHealthPrefab, new Vector3(squareX * 5, 1.5f, squareZ * 5), Quaternion.Euler(90f, 0f, 0f));
-            }
-            else if(Random.value > 0.85) 
-            {
-                Debug.Log("Item: Range");
-                Instantiate(bonusRangePrefab, new Vector3(squareX * 5, 1.5f, squareZ * 5), Quaternion.Euler(90f, 0f, 0f));
-            }
-            else if(Random.value > 0.95)
-            {
-                Debug.Log("Item: DoubleShot");
-                Instantiate(bonusDoubleShotPrefab, new Vector3(squareX * 5, 1.5f, squareZ * 5), Quaternion.Euler(90f, 0f, 0f));
-            }
-            else
-            {
-                Debug.Log("Item: AllStatsUp");
-                Instantiate(allStatsUpPrefab, new Vector3(squareX * 5, 1.5f, squareZ * 5), Quaternion.Euler(90f, 0f, 0f));
+                if(Random.value > 0.85)
+                {
+                    Debug.Log("Item: AttackSpeed");
+                    Instantiate(bonusAttackSpeedPrefab, new Vector3(squareX * 5, 1.5f, squareZ * 5), Quaternion.Euler(90f, 0f, 0f));
+                    itemSpawned = true;
+                }
+                else if(Random.value > 0.85)
+                {
+                    Debug.Log("Item: BulletSpeed");
+                    Instantiate(bonusBulletSpeedPrefab, new Vector3(squareX * 5, 1.5f, squareZ * 5), Quaternion.Euler(90f, 0f, 0f));
+                    itemSpawned = true;
+                }
+                else if(Random.value > 0.85)
+                {
+                    Debug.Log("Item: Damage");
+                    Instantiate(bonusDamagePrefab, new Vector3(squareX * 5, 1.5f, squareZ * 5), Quaternion.Euler(90f, 0f, 0f));
+                    itemSpawned = true;
+                }
+                else if(Random.value > 0.85)
+                {
+                    Debug.Log("Item: EmptyHealth");
+                    Instantiate(bonusEmptyHealthPrefab, new Vector3(squareX * 5, 1.5f, squareZ * 5), Quaternion.Euler(90f, 0f, 0f));
+                    itemSpawned = true;
+                }
+                else if(Random.value > 0.85)
+                {
+                    Debug.Log("Item: Health");
+                    Instantiate(bonusHealthPrefab, new Vector3(squareX * 5, 1.5f, squareZ * 5), Quaternion.Euler(90f, 0f, 0f));
+                    itemSpawned = true;
+                }
+                else if(Random.value > 0.85)
+                {
+                    Debug.Log("Item: Range");
+                    Instantiate(bonusRangePrefab, new Vector3(squareX * 5, 1.5f, squareZ * 5), Quaternion.Euler(90f, 0f, 0f));
+                    itemSpawned = true;
+                }
+                else if(Random.value > 0.95 && PlayerUpgrade.playerDoubleShot == false)
+                {
+                    Debug.Log("Item: DoubleShot");
+                    Instantiate(bonusDoubleShotPrefab, new Vector3(squareX * 5, 1.5f, squareZ * 5), Quaternion.Euler(90f, 0f, 0f));
+                    itemSpawned = true;
+                }
+                else if(Random.value > 0.95)
+                {
+                    Debug.Log("Item: AllStatsUp");
+                    Instantiate(allStatsUpPrefab, new Vector3(squareX * 5, 1.5f, squareZ * 5), Quaternion.Euler(90f, 0f, 0f));
+                    itemSpawned = true;
+                }
             }
             
         }

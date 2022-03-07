@@ -27,7 +27,6 @@ public class IzzyBulletScript : MonoBehaviour
         Destroy(gameObject);
         if (coll.gameObject.tag == "Player" && player.playerDamageCooldown <= 0)
         {
-            Debug.Log("Damage dealt: " + izzyDamage);
             player.PlayerDamage(izzyDamage);
             playerController.PlayerKnockback(transform, 0.05f);
         }

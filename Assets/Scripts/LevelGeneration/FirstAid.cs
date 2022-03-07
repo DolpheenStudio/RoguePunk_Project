@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class FirstAid : MonoBehaviour
 {
-    public Player player;
     public float healingValue = 20f;
+
+    private Player player;
+    private EndTeleport endTeleport;
 
     void Start()
     {
         player = FindObjectOfType<Player>();
-        if (Vector3.Distance(transform.position, player.transform.position) <= 30)
+        endTeleport = FindObjectOfType<EndTeleport>();
+        if (Vector3.Distance(transform.position, player.transform.position) <= 30 || Vector3.Distance(transform.position, endTeleport.transform.position) <=3)
         {
             Destroy(gameObject);
         }
