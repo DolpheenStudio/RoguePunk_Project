@@ -18,10 +18,10 @@ public class Enemy : MonoBehaviour
     {
         player = FindObjectOfType<Player>();
         currentEnemyHealth = maxEnemyHealth;
-        /*if(Vector3.Distance(transform.position, player.transform.position) <= 30)
+        if(Vector3.Distance(transform.position, player.transform.position) <= 30)
         {
             Destroy(gameObject);
-        }*/
+        }
     }
 
     void Update()

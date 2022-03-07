@@ -52,6 +52,16 @@ public class BonusItem : MonoBehaviour
                 PlayerUpgrade.playerBonusRange++;
                 player.ReloadPlayerBonus();
             }
+            if(gameObject.tag == "AllStatsBonus")
+            {
+                PlayerUpgrade.playerBonusRange++;
+                PlayerUpgrade.playerBonusAttackSpeed++;
+                PlayerUpgrade.playerBonusBulletSpeed++;
+                PlayerUpgrade.playerBonusDamage++;
+                PlayerUpgrade.playerBonusHealth++;
+                player.currentPlayerHealth += 20f;
+                player.ReloadPlayerBonus();
+            }
         }
     }
 }

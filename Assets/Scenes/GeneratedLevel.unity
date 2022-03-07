@@ -261,6 +261,7 @@ MonoBehaviour:
   bonusEmptyHealthPrefab: {fileID: 9007274307208817853, guid: d789a8591dad2db4eb53acb236903402, type: 3}
   bonusRangePrefab: {fileID: 2289989307100755822, guid: 935eb74b9fb347543a0e20846e8b19c6, type: 3}
   bonusDoubleShotPrefab: {fileID: 1064297213210519177, guid: 37637ae830f51aa47891fb054202c34f, type: 3}
+  allStatsUpPrefab: {fileID: 8002666474934785581, guid: f4302d8ff323b3e4493d44592f099fdc, type: 3}
 --- !u!114 &2000391650
 MonoBehaviour:
   m_ObjectHideFlags: 0
