@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
         {
             endTeleport.Portal();
         }
-        playerDamageCooldown -= Time.deltaTime;
+        if(playerDamageCooldown >= 0)playerDamageCooldown -= Time.deltaTime;
     }
 
     public void PlayerDamage(float damage)
