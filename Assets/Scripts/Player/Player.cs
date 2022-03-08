@@ -11,20 +11,35 @@ public class Player : MonoBehaviour
     public float currentPlayerHealth;
     public float playerDamage;
     public bool playerDoubleShot = false;
-    public bool playerLevelReload = true;
-    public float maxPlayerHealthBase = 100f;
-    public float playerRangeBase = 5f;
-    public float playerBulletSpeedBase = 100f;
-    public float playerAttackSpeedBase = 1f;
-    public float playerDamageBase = 10;
-    public float playerDamageCooldown = 0f;
-    private EndTeleport endTeleport;
+    public float playerRangeUpgrade;
+    public float playerBulletSpeedUpgrade;
+    public float playerAttackSpeedUpgrade;
+    public float playerDamageUpgrade;
+    public float playerDamageCooldown;
 
     void Start()
     {
-        endTeleport = FindObjectOfType<EndTeleport>();
         currentPlayerHealth = PlayerUpgrade.currentPlayerHealthStatic;
 
+        playerRangeUpgrade = 0f;
+        playerBulletSpeedUpgrade = 0f;
+        playerDamageUpgrade = 0f;
+        playerAttackSpeedUpgrade = 0f;
+        LoadPlayer();
+    }
+
+    public void SavePlayer() 
+    {
+        SavePlayerSystem.SavePlayer(this);
+    }
+
+    public void LoadPlayer() 
+    {
+        PlayerUpgradeData playerData = SavePlayerSystem.LoadPlayer();
+        playerAttackSpeedUpgrade = playerData.playerAttackSpeedUpgrade;
+        playerDamageUpgrade = playerData.playerDamageUpgrade;
+        playerBulletSpeedUpgrade = playerData.playerBulletSpeedUpgrade;
+        playerRangeUpgrade = playerData.playerRangeUpgrade;
         ReloadPlayerBonus();
     }
 
@@ -34,11 +49,7 @@ public class Player : MonoBehaviour
         {
             Death();
         }
-        if(Input.GetKey(KeyCode.R))
-        {
-            endTeleport.Portal();
-        }
-        playerDamageCooldown -= Time.deltaTime;
+        if(playerDamageCooldown >= 0) playerDamageCooldown -= Time.deltaTime;
     }
 
     public void PlayerDamage(float damage)
@@ -60,31 +71,27 @@ public class Player : MonoBehaviour
 
     public void ReloadPlayerBonus()
     {
-        maxPlayerHealth = maxPlayerHealthBase + PlayerUpgrade.playerBonusHealth;
-        playerRange = playerRangeBase + PlayerUpgrade.playerBonusRange;
-        
-        
-        playerBulletSpeed = playerBulletSpeedBase;
+        playerBulletSpeed = 10f + playerBulletSpeedUpgrade;
         for(int i=0; i<PlayerUpgrade.playerBonusBulletSpeed; i++) 
         {
-            playerBulletSpeed *= 1.2f;
+            playerBulletSpeed += 2f;
         }
         
-        playerAttackSpeed = playerAttackSpeedBase;
+        playerAttackSpeed = 1f + playerAttackSpeedUpgrade;
         for(int i=0; i<PlayerUpgrade.playerBonusAttackSpeed; i++) 
         {
             playerAttackSpeed *= 0.8f;
         }
 
-        playerDamage = playerDamageBase;
+        playerDamage = 10f + playerDamageUpgrade;
         for(int i=0; i<PlayerUpgrade.playerBonusDamage; i++) 
         {
-            playerDamage *= 1.2f;
+            playerDamage += 2f;
         } 
 
         playerDoubleShot = PlayerUpgrade.playerDoubleShot;
 
-        maxPlayerHealth = maxPlayerHealthBase;
+        maxPlayerHealth = 100f;
         for(int i=0; i<PlayerUpgrade.playerBonusEmptyHealth; i++) 
         {
             maxPlayerHealth += 40;
@@ -95,10 +102,10 @@ public class Player : MonoBehaviour
             maxPlayerHealth += 20;
         }
 
-        playerRange = playerRangeBase;
+        playerRange = 5f + playerRangeUpgrade;
         for(int i=0; i<PlayerUpgrade.playerBonusRange; i++) 
         {
-            playerRange *= 1.25f;
+            playerRange += 1f;
         }
     }
 }
