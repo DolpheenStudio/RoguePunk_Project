@@ -17,10 +17,13 @@ public class Player : MonoBehaviour
     public float playerDamageUpgrade;
     public float playerDamageCooldown;
 
+    public GameObject healthBar;
+
     void Start()
     {
+        healthBar = FindObjectOfType<HealthBar>();
         currentPlayerHealth = PlayerUpgrade.currentPlayerHealthStatic;
-
+        healthBar.SetMaxHealth(maxPlayerHealth);
         playerRangeUpgrade = 0f;
         playerBulletSpeedUpgrade = 0f;
         playerDamageUpgrade = 0f;
@@ -57,6 +60,7 @@ public class Player : MonoBehaviour
         if(playerDamageCooldown <= 0) 
         {
             currentPlayerHealth -= damage;
+            healthBar.SetHealth(currentPlayerHealth);
             playerDamageCooldown = 0.3f;
         }
     }
