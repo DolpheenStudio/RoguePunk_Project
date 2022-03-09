@@ -50,6 +50,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        healthBar.SetMaxHealth(maxPlayerHealth);
         healthBar.SetHealth(currentPlayerHealth);
 
         if (currentPlayerHealth <= 0)

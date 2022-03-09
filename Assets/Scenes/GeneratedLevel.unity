@@ -276,7 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worldSize: 1000
   generateField: {fileID: 2000391649}
-  playerPrefab: {fileID: 4721827204912537677, guid: 4aba56aa8f7582b4dad4ca13ad3d6565, type: 3}
+  playerPrefab: {fileID: 5291907587085913206, guid: 1e13e5cdf4ca48f4f9786fe0ad10de9a, type: 3}
 --- !u!4 &2000391651
 Transform:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class LowerBodyRotation : MonoBehaviour
 
     public float speed = 6f;
 
-    public float turnSmoothTime = 1f;
+    public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
 
     void Update()
