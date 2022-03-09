@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     public float playerDamageUpgrade;
     public float playerDamageCooldown;
 
-    public GameObject healthBar;
+    public HealthBar healthBar;
 
     void Start()
     {
@@ -48,7 +48,9 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if(currentPlayerHealth <= 0)
+        healthBar.SetHealth(currentPlayerHealth);
+
+        if (currentPlayerHealth <= 0)
         {
             Death();
         }
@@ -60,7 +62,6 @@ public class Player : MonoBehaviour
         if(playerDamageCooldown <= 0) 
         {
             currentPlayerHealth -= damage;
-            healthBar.SetHealth(currentPlayerHealth);
             playerDamageCooldown = 0.3f;
         }
     }
