@@ -164,9 +164,8 @@ MonoBehaviour:
   player: {fileID: 0}
   izzyBulletPrefab: {fileID: 6027840544316589711, guid: 5bcd23681f5fdd0479692164f0904e78, type: 3}
   shootingPoint: {fileID: 4257163166041581216}
-  izzyAttackSpeed: 1
-  izzyAttackCooldown: 0
   izzyBulletSpeed: 10
+  izzyAttackSpeed: 1
 --- !u!136 &6149197327093433641
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -195,10 +194,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxEnemyHealth: 50
   currentEnemyHealth: 0
-  enemyDamage: 5
-  enemyAttackSpeed: 1
   standardMaterial: {fileID: 2100000, guid: 35902c9f423301145995e265767083ab, type: 2}
   damageMaterial: {fileID: 2100000, guid: d9f072a575dc84e4c80d787891d670b4, type: 2}
+  scrapPrefab: {fileID: 2105554380207743518, guid: 621c71de95d8b1848b20877ec23c420a, type: 3}
 --- !u!1 &5769721785374355361
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,7 +3,10 @@ guid: ecb4866152d02884a88012fd75be1f14
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - standardMaterial: {instanceID: 0}
+  - damageMaterial: {instanceID: 0}
+  - scrapPrefab: {fileID: 2105554380207743518, guid: 621c71de95d8b1848b20877ec23c420a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
