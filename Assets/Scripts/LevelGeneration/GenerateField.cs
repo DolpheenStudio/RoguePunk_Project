@@ -25,7 +25,7 @@ public class GenerateField : MonoBehaviour
 
     public void GenerateSquare(float squareX, float squareZ, int generatedSquares)
     {
-        if(generatedSquares == 100)
+        if(generatedSquares == 250 || generatedSquares == 500 || generatedSquares == 750)
         {
             Instantiate(itemSlotPrefab, new Vector3(squareX * 5, 0f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
             while (itemSpawned == false)
@@ -79,21 +79,21 @@ public class GenerateField : MonoBehaviour
                     itemSpawned = true;
                 }
             }
-            
+            itemSpawned = false;
         }
         else 
         {
             Instantiate(fieldPrefab, new Vector3(squareX * 5, 0f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
 
-            if (Random.value > 0.97)
+            if (Random.value > 0.95)
             {
                 Instantiate(bumperPrefab, new Vector3(squareX * 5, 0.25f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
             }
-            else if (Random.value > 0.97)
+            else if (Random.value > 0.95)
             {
                 Instantiate(izzyPrefab, new Vector3(squareX * 5, 0.25f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
             }
-            else if (Random.value > 0.97)
+            else if (Random.value > 0.95)
             {
                 Instantiate(blinkyPrefab, new Vector3(squareX * 5, 0.25f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
             }

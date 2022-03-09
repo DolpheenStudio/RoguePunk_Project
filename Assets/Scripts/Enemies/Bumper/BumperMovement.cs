@@ -31,7 +31,7 @@ public class BumperMovement : MonoBehaviour
         {
             nextAttack -= Time.deltaTime;
         }
-        if (Vector3.Distance(transform.position, player.transform.position) <= 2.1 && nextAttack <= 0 && player.playerDamageCooldown <= 0)
+        if (Vector3.Distance(transform.position, player.transform.position) <= 2.1 && nextAttack <= 0)
         {
             nextAttack = bumperAttackSpeed;
             player.PlayerDamage(bumperDamage);

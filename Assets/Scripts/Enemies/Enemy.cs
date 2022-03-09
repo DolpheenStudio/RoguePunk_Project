@@ -49,8 +49,11 @@ public class Enemy : MonoBehaviour
 
     public void Damage(float playerDamage)
     {
-        currentEnemyHealth -= playerDamage;
-        isDamageMaterial = 0.05f;
+        if(player.playerDamageCooldown <= 0)
+        {
+            currentEnemyHealth -= playerDamage;
+            isDamageMaterial = 0.05f;
+        }
     }
 
     void Death()

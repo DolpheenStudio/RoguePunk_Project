@@ -46,7 +46,7 @@ public class BlinkyMovement : MonoBehaviour
                 damageCooldown = false;
             }
         }
-        if (Vector3.Distance(transform.position, player.transform.position) <= 1.5 && damageCooldown == true && player.playerDamageCooldown <= 0)
+        if (Vector3.Distance(transform.position, player.transform.position) <= 1.5 && damageCooldown == true)
         {
             player.PlayerDamage(blinkyDamage);
             playerController.PlayerKnockback(transform, 0.2f);

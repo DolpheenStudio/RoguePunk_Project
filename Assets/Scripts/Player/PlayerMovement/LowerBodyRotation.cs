@@ -9,7 +9,7 @@ public class LowerBodyRotation : MonoBehaviour
 
     public float speed = 6f;
 
-    public float turnSmoothTime = 0.1f;
+    public float turnSmoothTime = 1f;
     float turnSmoothVelocity;
 
     void Update()
@@ -24,6 +24,7 @@ public class LowerBodyRotation : MonoBehaviour
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
 
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
+            transform.rotation = transform.rotation * Quaternion.Euler(0f, 0f, Time.deltaTime * 50);
         }
     }
 }
