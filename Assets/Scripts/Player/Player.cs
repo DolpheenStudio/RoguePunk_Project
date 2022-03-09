@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     public float playerDamageUpgrade;
     public float playerDamageCooldown;
 
-    public HealthBar healthBar;
+    public GameObject healthBar;
 
     void Start()
     {
