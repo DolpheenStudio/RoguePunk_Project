@@ -443,7 +443,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxEnemyHealth: 50
   currentEnemyHealth: 0
-  enemyDamage: 15
-  enemyAttackSpeed: 0.5
   standardMaterial: {fileID: 2100000, guid: 35902c9f423301145995e265767083ab, type: 2}
   damageMaterial: {fileID: 2100000, guid: d9f072a575dc84e4c80d787891d670b4, type: 2}
+  scrapPrefab: {fileID: 2105554380207743518, guid: 621c71de95d8b1848b20877ec23c420a, type: 3}

@@ -25,5 +25,6 @@ public class EndTeleport : MonoBehaviour
     {
         PlayerUpgrade.SetPlayerCurrentHealth(player.currentPlayerHealth);
         SceneManager.LoadScene("GeneratedLevel", LoadSceneMode.Single);
+        SavePlayerSystem.SavePlayer(player);
     }
 }

@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public float playerBulletSpeed;
     public float playerAttackSpeed;
     public float currentPlayerHealth;
+    public int playerScraps;
     public float playerDamage;
     public bool playerDoubleShot = false;
     public float playerRangeUpgrade;
@@ -43,6 +44,7 @@ public class Player : MonoBehaviour
         playerDamageUpgrade = playerData.playerDamageUpgrade;
         playerBulletSpeedUpgrade = playerData.playerBulletSpeedUpgrade;
         playerRangeUpgrade = playerData.playerRangeUpgrade;
+        playerScraps = playerData.playerScraps;
         ReloadPlayerBonus();
     }
 

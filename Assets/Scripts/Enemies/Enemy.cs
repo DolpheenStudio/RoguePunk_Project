@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     public float currentEnemyHealth;
     public Material standardMaterial;
     public Material damageMaterial;
+    public GameObject scrapPrefab;
 
     private Player player;
     private EndTeleport endTeleport;
@@ -17,11 +18,12 @@ public class Enemy : MonoBehaviour
     {
         player = FindObjectOfType<Player>();
         endTeleport = FindObjectOfType<EndTeleport>();
+
         currentEnemyHealth = maxEnemyHealth;
-        if(Vector3.Distance(transform.position, player.transform.position) <= 30 || Vector3.Distance(transform.position, endTeleport.transform.position) <=3)
+        /*if(Vector3.Distance(transform.position, player.transform.position) <= 30 || Vector3.Distance(transform.position, endTeleport.transform.position) <=3)
         {
             Destroy(gameObject);
-        }
+        }*/
     }
 
     void Update()
@@ -59,5 +61,10 @@ public class Enemy : MonoBehaviour
     void Death()
     {
         Destroy(gameObject);
+        for(int i=0; i<Random.Range(10,15); i++)
+        {
+            Instantiate(scrapPrefab, new Vector3(transform.position.x + Random.Range(-1f, 1f), 0.08f, transform.position.z + Random.Range(-1f, 1f)), 
+            Quaternion.Euler(-90f, transform.rotation.y, transform.rotation.z));
+        }
     }
 }

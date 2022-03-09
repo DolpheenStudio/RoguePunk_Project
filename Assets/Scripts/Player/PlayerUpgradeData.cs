@@ -9,6 +9,7 @@ public class PlayerUpgradeData
     public float playerRangeUpgrade;
     public float playerAttackSpeedUpgrade;
     public float playerBulletSpeedUpgrade;
+    public int playerScraps;
 
     public PlayerUpgradeData (Player player)
     {
@@ -16,5 +17,6 @@ public class PlayerUpgradeData
         playerRangeUpgrade = player.playerRangeUpgrade;
         playerAttackSpeedUpgrade = player.playerAttackSpeedUpgrade;
         playerBulletSpeedUpgrade = player.playerBulletSpeedUpgrade;
+        playerScraps = player.playerScraps;
     }
 }
