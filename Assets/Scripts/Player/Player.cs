@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -72,12 +73,11 @@ public class Player : MonoBehaviour
     void Death()
     {
         PlayerUpgrade.ResetPlayerBunus();
-        ReloadPlayerBonus();
-        currentPlayerHealth = maxPlayerHealth;
-        Debug.Log("PLAYER IS DEAD");
+        SavePlayer();
+        SceneManager.LoadScene("StemEncampment", LoadSceneMode.Single);
     }
 
-    public void ReloadPlayerBonus()
+    public async void ReloadPlayerBonus()
     {
         playerBulletSpeed = 10f + playerBulletSpeedUpgrade;
         for(int i=0; i<PlayerUpgrade.playerBonusBulletSpeed; i++) 
@@ -85,7 +85,11 @@ public class Player : MonoBehaviour
             playerBulletSpeed += 2f;
         }
         
-        playerAttackSpeed = 1f + playerAttackSpeedUpgrade;
+        playerAttackSpeed = 1f;
+        for(int i=0; i<playerAttackSpeedUpgrade; i++)
+        {
+            playerAttackSpeed *= 0.9f;
+        }
         for(int i=0; i<PlayerUpgrade.playerBonusAttackSpeed; i++) 
         {
             playerAttackSpeed *= 0.8f;

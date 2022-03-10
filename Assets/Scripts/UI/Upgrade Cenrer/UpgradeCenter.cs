@@ -18,7 +18,12 @@ public class UpgradeCenter : MonoBehaviour
         if(Vector3.Distance(transform.position, player.transform.position) <= 1.5) 
         {
             canvas.SetActive(true);
+            Cursor.visible = true;
         }
-        else canvas.SetActive(false);
+        else 
+        {
+            canvas.SetActive(false);
+            Cursor.visible = false;
+        }
     }
 }
