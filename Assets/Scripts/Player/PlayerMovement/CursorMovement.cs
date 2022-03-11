@@ -6,7 +6,7 @@ public class CursorMovement : MonoBehaviour
 {
     void Start()
     {
-        Cursor.visible = false;
+
     }
     void Update()
     {

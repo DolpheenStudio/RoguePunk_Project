@@ -15,6 +15,6 @@ public class ScrapText : MonoBehaviour
 
     void Update()
     {
-        scrapInfo.text = "Scraps: " + player.playerScraps;
+        scrapInfo.text = "Scraps: " + player.playerScraps + " " + Cursor.visible;
     }
 }

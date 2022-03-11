@@ -20,6 +20,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        IsGamePaused.isPauseMenuOn = false;
+        IsGamePaused.isUpgradeCenterOn = false;
+        IsGamePaused.isSavePointOn = false;
         foreach (MeshRenderer render in GetComponentsInChildren<MeshRenderer>())
         {
             if (render.name != "CursorModel") render.material = standardMaterial;
@@ -58,6 +61,11 @@ public class PlayerMovement : MonoBehaviour
             controller.Move(knockBackDirection * knockBackForce * knockBackCounter);
             knockBackCounter -= Time.deltaTime;
         }
+        if(IsGamePaused.isPauseMenuOn == false && IsGamePaused.isSavePointOn == false && IsGamePaused.isUpgradeCenterOn == false)
+        {
+            Cursor.visible = false;
+        }
+        else Cursor.visible = true;
     }
 
     public void PlayerKnockback(Transform enemy, float enemyKnockbackForce)

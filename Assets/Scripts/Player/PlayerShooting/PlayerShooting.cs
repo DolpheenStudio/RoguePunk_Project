@@ -7,7 +7,6 @@ public class PlayerShooting : MonoBehaviour
     public Player player;
     public Transform firePoint;
     public GameObject bulletPrefab;
-    public Transform cursor;
     private float nextFire = 0f;
 
     void Update()

@@ -11,14 +11,12 @@ public class PauseUI : MonoBehaviour
     {
         gameObject.SetActive(false);
         Time.timeScale = 1;
-        Cursor.visible = false;
         IsGamePaused.isGamePaused = false;
     }
 
     public void ReturnButton()
     {
         Time.timeScale = 1;
-        Cursor.visible = false;
         IsGamePaused.isGamePaused = false;
         player.Death();
     }

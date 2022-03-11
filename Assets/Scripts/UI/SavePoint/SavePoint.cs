@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class SavePoint : MonoBehaviour
 {
@@ -18,13 +17,13 @@ public class SavePoint : MonoBehaviour
         if(Vector3.Distance(transform.position, player.transform.position) <= 1f && !IsGamePaused.isGamePaused)
         {
             canvas.SetActive(true);
-            Cursor.visible = true;
+            IsGamePaused.isSavePointOn = true;
         }
-        else 
+        else
         {
             canvas.SetActive(false);
-            Cursor.visible = false;
             saveInfo.SetActive(false);
+            IsGamePaused.isSavePointOn = false;
         }
     }
 }

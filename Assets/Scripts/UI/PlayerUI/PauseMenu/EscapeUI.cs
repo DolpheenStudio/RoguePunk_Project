@@ -5,6 +5,7 @@ using UnityEngine;
 public class EscapeUI : MonoBehaviour
 {
     public GameObject pauseUI;
+    public Player player;
     void Start()
     {
         pauseUI.SetActive(false);
@@ -16,15 +17,15 @@ public class EscapeUI : MonoBehaviour
         {
             pauseUI.SetActive(true);
             Time.timeScale = 0;
-            Cursor.visible = true;
             IsGamePaused.isGamePaused = true;
+            IsGamePaused.isPauseMenuOn = true;
         }
         else if(Input.GetButtonDown("Cancel") && pauseUI.activeSelf)
         {
             pauseUI.SetActive(false);
             Time.timeScale = 1;
-            Cursor.visible = false;
             IsGamePaused.isGamePaused = false;
+            IsGamePaused.isPauseMenuOn = false;
         }
     }
 }

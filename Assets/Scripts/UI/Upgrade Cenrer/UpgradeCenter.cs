@@ -17,12 +17,12 @@ public class UpgradeCenter : MonoBehaviour
         if(Vector3.Distance(transform.position, player.transform.position) <= 1.5 && !IsGamePaused.isGamePaused) 
         {
             canvas.SetActive(true);
-            Cursor.visible = true;
+            IsGamePaused.isUpgradeCenterOn = true;
         }
-        else 
+        else
         {
             canvas.SetActive(false);
-            Cursor.visible = false;
+            IsGamePaused.isUpgradeCenterOn = false;
         }
     }
 }

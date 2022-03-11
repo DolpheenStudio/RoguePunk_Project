@@ -77,7 +77,7 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene("StemEncampment", LoadSceneMode.Single);
     }
 
-    public async void ReloadPlayerBonus()
+    public void ReloadPlayerBonus()
     {
         playerBulletSpeed = 10f + playerBulletSpeedUpgrade;
         for(int i=0; i<PlayerUpgrade.playerBonusBulletSpeed; i++) 

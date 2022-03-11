@@ -5,17 +5,15 @@ using UnityEngine;
 public class MinimapCamera : MonoBehaviour
 {
     public GameObject minimapCamera;
-    private Camera camera;
     void Start()
     {
         minimapCamera.SetActive(false);
-        camera = minimapCamera.GetComponent<Camera>();
     }
 
     public void SetCameraFOV(float startZ, float endZ, float startX, float endX)
     {
-        if ((startZ - endZ) > (startX - endX)) camera.fieldOfView = (startZ - endZ) / 9;
-        else camera.fieldOfView = (startX - endX) / 9;
+        if ((startZ - endZ) > (startX - endX)) minimapCamera.GetComponent<Camera>().fieldOfView = (startZ - endZ) / 9;
+        else minimapCamera.GetComponent<Camera>().fieldOfView = (startX - endX) / 9;
     }
     void Update()
     {
