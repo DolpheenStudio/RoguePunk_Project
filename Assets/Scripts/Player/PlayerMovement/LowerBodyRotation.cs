@@ -9,7 +9,6 @@ public class LowerBodyRotation : MonoBehaviour
 
     public float speed = 6f;
 
-    public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
 
     void Update()
@@ -21,7 +20,7 @@ public class LowerBodyRotation : MonoBehaviour
         if (direction.magnitude >= 0.1f)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, 0.3f);
 
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
             transform.rotation = transform.rotation * Quaternion.Euler(0f, 0f, Time.deltaTime * 50);

@@ -11,13 +11,17 @@ public class GenerateNewLevel : MonoBehaviour
     int z = 100;
     int endX = 200;
     int endZ;
+    int leftZ = 0;
+    int rightZ = 200;
     int direction = 0;
     int lastDirection = 2;
     int generatedFields = 0;
     int[,] generatedFieldsArray = new int[200, 200];
 
     public GenerateField generateField;
+    public CreateMinimap createMinimap;
     public Player playerPrefab;
+    public GameObject minimapPlayerPointer;
 
     void Start()
     {
@@ -50,6 +54,11 @@ public class GenerateNewLevel : MonoBehaviour
                     {
                         generatedFieldsArray[x, z + 1] = 1;
                         generatedFields++;
+
+                        if(rightZ >= z + 1)
+                        {
+                            rightZ = z + 1;
+                        }
                     }
                     z += 1;
                     break;
@@ -74,6 +83,11 @@ public class GenerateNewLevel : MonoBehaviour
                     {
                         generatedFieldsArray[x, z - 1] = 1;
                         generatedFields++;
+
+                        if(leftZ <= z - 1)
+                        {
+                            leftZ = z - 1;
+                        }
                     }
                     z -= 1;
                     break;
@@ -85,7 +99,9 @@ public class GenerateNewLevel : MonoBehaviour
             startX--;
             startZ--;
         }
+        createMinimap.SetMiddle((float) startX * 5, (float) endX * 5, (float) leftZ * 5, rightZ * 5);
         Instantiate(playerPrefab, new Vector3((float)startX * 5, 0, (float)startZ * 5), Quaternion.Euler(0f, 0f, 0f));
+        Instantiate(minimapPlayerPointer, new Vector3((float)startX * 5 + 1000, 0, (float)startZ * 5), Quaternion.Euler(0f, 0f, 0f));
         generateField.GenerateEnd(endX-2, endZ);
         generatedFields = 0;
         for(int x = 1; x < 199; x++)
@@ -95,15 +111,48 @@ public class GenerateNewLevel : MonoBehaviour
                 if (generatedFieldsArray[x, z] == 1)
                 {
                     generateField.GenerateSquare((float)x, (float)z, generatedFields);
+                    createMinimap.GenerateMinimapField((float)x, (float)z);
                     generatedFields++;
-                    if (generatedFieldsArray[x - 1, z] != 1) generateField.GenerateWall((float)x - 1, (float)z);
-                    if (generatedFieldsArray[x - 1, z + 1] != 1) generateField.GenerateWall((float)x - 1, (float)z + 1);
-                    if (generatedFieldsArray[x - 1, z - 1] != 1) generateField.GenerateWall((float)x - 1, (float)z - 1);
-                    if (generatedFieldsArray[x + 1, z] != 1) generateField.GenerateWall((float)x + 1, (float)z);
-                    if (generatedFieldsArray[x + 1, z + 1] != 1) generateField.GenerateWall((float)x + 1, (float)z + 1);
-                    if (generatedFieldsArray[x + 1, z - 1] != 1) generateField.GenerateWall((float)x + 1, (float)z - 1);
-                    if (generatedFieldsArray[x, z + 1] != 1) generateField.GenerateWall((float)x, (float)z + 1);
-                    if (generatedFieldsArray[x, z - 1] != 1) generateField.GenerateWall((float)x, (float)z - 1);
+                    if (generatedFieldsArray[x - 1, z] != 1) 
+                    {
+                        generateField.GenerateWall((float)x - 1, (float)z);
+                        createMinimap.GenerateMinimapWall((float)x - 1, (float)z);
+                    }
+                    if (generatedFieldsArray[x - 1, z + 1] != 1)
+                    {
+                        generateField.GenerateWall((float)x - 1, (float)z + 1);
+                        createMinimap.GenerateMinimapWall((float)x - 1, (float)z + 1);
+                    } 
+                    if (generatedFieldsArray[x - 1, z - 1] != 1)
+                    {
+                        generateField.GenerateWall((float)x - 1, (float)z - 1);
+                        createMinimap.GenerateMinimapWall((float)x - 1, (float)z - 1);
+                    } 
+                    if (generatedFieldsArray[x + 1, z] != 1)
+                    {
+                        generateField.GenerateWall((float)x + 1, (float)z);
+                        createMinimap.GenerateMinimapWall((float)x + 1, (float)z);
+                    } 
+                    if (generatedFieldsArray[x + 1, z + 1] != 1)
+                    {
+                        generateField.GenerateWall((float)x + 1, (float)z + 1);
+                        createMinimap.GenerateMinimapWall((float)x + 1, (float)z + 1);
+                    } 
+                    if (generatedFieldsArray[x + 1, z - 1] != 1)
+                    {
+                        generateField.GenerateWall((float)x + 1, (float)z - 1);
+                        createMinimap.GenerateMinimapWall((float)x + 1, (float)z - 1);
+                    } 
+                    if (generatedFieldsArray[x, z + 1] != 1)
+                    {
+                        generateField.GenerateWall((float)x, (float)z + 1);
+                        createMinimap.GenerateMinimapWall((float)x, (float)z + 1);
+                    } 
+                    if (generatedFieldsArray[x, z - 1] != 1)
+                    {
+                        generateField.GenerateWall((float)x, (float)z - 1);
+                        createMinimap.GenerateMinimapWall((float)x, (float)z - 1);
+                    } 
                 }
             }
         }

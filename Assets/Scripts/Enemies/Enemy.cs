@@ -20,10 +20,10 @@ public class Enemy : MonoBehaviour
         endTeleport = FindObjectOfType<EndTeleport>();
 
         currentEnemyHealth = maxEnemyHealth;
-        /*if(Vector3.Distance(transform.position, player.transform.position) <= 30 || Vector3.Distance(transform.position, endTeleport.transform.position) <=3)
+        if(Vector3.Distance(transform.position, player.transform.position) <= 200 || Vector3.Distance(transform.position, endTeleport.transform.position) <=3)
         {
             Destroy(gameObject);
-        }*/
+        }
     }
 
     void Update()
