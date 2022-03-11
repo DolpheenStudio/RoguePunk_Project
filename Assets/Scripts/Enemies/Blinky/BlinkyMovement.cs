@@ -20,6 +20,7 @@ public class BlinkyMovement : MonoBehaviour
         enemyController = gameObject.GetComponent<CharacterController>();
         player = FindObjectOfType<Player>();
         playerController = FindObjectOfType<PlayerMovement>();
+        blinkyDamage += blinkyDamage * (PlayerUpgrade.playerLevelIteration - 1) * 0.1f;
     }
 
     void LateUpdate()

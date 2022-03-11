@@ -14,8 +14,8 @@ public class MinimapCamera : MonoBehaviour
 
     public void SetCameraFOV(float startZ, float endZ, float startX, float endX)
     {
-        if ((startZ - endZ) > (startX - endX)) camera.fieldOfView = (startZ - endZ) / 11;
-        else camera.fieldOfView = (startX - endX) / 11;
+        if ((startZ - endZ) > (startX - endX)) camera.fieldOfView = (startZ - endZ) / 9;
+        else camera.fieldOfView = (startX - endX) / 9;
     }
     void Update()
     {

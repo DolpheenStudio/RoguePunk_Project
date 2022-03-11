@@ -19,8 +19,9 @@ public class Enemy : MonoBehaviour
         player = FindObjectOfType<Player>();
         endTeleport = FindObjectOfType<EndTeleport>();
 
+        maxEnemyHealth += maxEnemyHealth * (PlayerUpgrade.playerLevelIteration - 1) * 0.1f;
         currentEnemyHealth = maxEnemyHealth;
-        if(Vector3.Distance(transform.position, player.transform.position) <= 200 || Vector3.Distance(transform.position, endTeleport.transform.position) <=3)
+        if(Vector3.Distance(transform.position, player.transform.position) <= 30 || Vector3.Distance(transform.position, endTeleport.transform.position) <=3)
         {
             Destroy(gameObject);
         }
@@ -61,7 +62,7 @@ public class Enemy : MonoBehaviour
     void Death()
     {
         Destroy(gameObject);
-        for(int i=0; i<Random.Range(10,15); i++)
+        for(int i=0; i<(int) (Random.Range(10,15) + Random.Range(10, 15) * (PlayerUpgrade.playerLevelIteration - 1) * 0.1f); i++)
         {
             Instantiate(scrapPrefab, new Vector3(transform.position.x + Random.Range(-1f, 1f), 0.08f, transform.position.z + Random.Range(-1f, 1f)), 
             Quaternion.Euler(-90f, transform.rotation.y, transform.rotation.z));

@@ -18,6 +18,7 @@ public class BumperMovement : MonoBehaviour
         enemyController = gameObject.GetComponent<CharacterController>();
         player = FindObjectOfType<Player>();
         playerController = FindObjectOfType<PlayerMovement>();
+        bumperDamage += bumperDamage * (PlayerUpgrade.playerLevelIteration - 1) * 0.1f;
     }
     
     void LateUpdate()

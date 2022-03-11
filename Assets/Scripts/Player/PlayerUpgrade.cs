@@ -12,6 +12,7 @@ public static class PlayerUpgrade
     public static float playerBonusRange {get; set;}
     public static bool playerDoubleShot {get; set;}
     public static float currentPlayerHealthStatic {get; set;} = 100f;
+    public static int playerLevelIteration {get; set;}
 
     public static void SetPlayerCurrentHealth(float currentPlayerHealth) 
     {
@@ -26,5 +27,6 @@ public static class PlayerUpgrade
         playerBonusEmptyHealth = 0;
         playerBonusRange = 0;
         playerDoubleShot = false;
+        playerLevelIteration = 0;
     }
 }

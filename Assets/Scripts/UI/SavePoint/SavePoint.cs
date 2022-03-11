@@ -15,7 +15,7 @@ public class SavePoint : MonoBehaviour
     }
     void Update()
     {
-        if(Vector3.Distance(transform.position, player.transform.position) <= 1f)
+        if(Vector3.Distance(transform.position, player.transform.position) <= 1f && !IsGamePaused.isGamePaused)
         {
             canvas.SetActive(true);
             Cursor.visible = true;

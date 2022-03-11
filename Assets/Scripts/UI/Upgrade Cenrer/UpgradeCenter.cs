@@ -14,7 +14,7 @@ public class UpgradeCenter : MonoBehaviour
 
     void Update()
     {
-        if(Vector3.Distance(transform.position, player.transform.position) <= 1.5) 
+        if(Vector3.Distance(transform.position, player.transform.position) <= 1.5 && !IsGamePaused.isGamePaused) 
         {
             canvas.SetActive(true);
             Cursor.visible = true;

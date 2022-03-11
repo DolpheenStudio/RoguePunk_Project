@@ -15,11 +15,7 @@ public class IzzyBulletScript : MonoBehaviour
     {
         player = FindObjectOfType<Player>();
         playerController = FindObjectOfType<PlayerMovement>();
-    }
-
-    void Update()
-    {
-        
+        izzyDamage += izzyDamage * (PlayerUpgrade.playerLevelIteration - 1) * 0.1f;
     }
 
     void OnCollisionEnter(Collision coll)
