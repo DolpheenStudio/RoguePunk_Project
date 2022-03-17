@@ -30,5 +30,10 @@ public class BulletScript : MonoBehaviour
             Enemy enemy = coll.gameObject.GetComponentInParent<Enemy>();
             enemy.Damage(player.playerDamage);
         }
+        if(coll.gameObject.tag == "Crate")
+        {
+            Crate crate = coll.gameObject.GetComponentInParent<Crate>();
+            crate.Damage();
+        }
     }
 }

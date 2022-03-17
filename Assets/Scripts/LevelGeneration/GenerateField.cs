@@ -11,7 +11,7 @@ public class GenerateField : MonoBehaviour
     public GameObject bumperPrefab;
     public GameObject izzyPrefab;
     public GameObject blinkyPrefab;
-    public GameObject firstAidPrefab;
+    public GameObject cratePrefab;
     public GameObject bonusAttackSpeedPrefab;
     public GameObject bonusBulletSpeedPrefab;
     public GameObject bonusDamagePrefab;
@@ -21,11 +21,13 @@ public class GenerateField : MonoBehaviour
     public GameObject bonusDoubleShotPrefab;
     public GameObject allStatsUpPrefab;
 
+    public int generatedEnemies;
+
     private bool itemSpawned = false;
 
     public void GenerateSquare(float squareX, float squareZ, int generatedSquares)
     {
-        if(generatedSquares == 250 || generatedSquares == 500 || generatedSquares == 750)
+        if(generatedSquares == 100)
         {
             Instantiate(itemSlotPrefab, new Vector3(squareX * 5, 0f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
             while (itemSpawned == false)
@@ -77,21 +79,24 @@ public class GenerateField : MonoBehaviour
         {
             Instantiate(fieldPrefab, new Vector3(squareX * 5, 0f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
 
-            if (Random.value > 0.95)
+            if (Random.value > 0.90)
             {
                 Instantiate(bumperPrefab, new Vector3(squareX * 5, 0.25f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
+                PlayerUpgrade.generatedEnemies++;
             }
-            else if (Random.value > 0.95)
+            else if (Random.value > 0.90)
             {
                 Instantiate(izzyPrefab, new Vector3(squareX * 5, 0.25f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
+                PlayerUpgrade.generatedEnemies++;
             }
-            else if (Random.value > 0.95)
+            else if (Random.value > 0.90)
             {
                 Instantiate(blinkyPrefab, new Vector3(squareX * 5, 0.25f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
+                PlayerUpgrade.generatedEnemies++;
             }
             else if (Random.value > 0.98)
             {
-                Instantiate(firstAidPrefab, new Vector3(squareX * 5, 0.25f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
+                Instantiate(cratePrefab, new Vector3(squareX * 5, 0f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
             }
         }
     }

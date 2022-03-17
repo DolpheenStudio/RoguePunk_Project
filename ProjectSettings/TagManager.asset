@@ -14,6 +14,7 @@ TagManager:
   - EmptyHealthBonus
   - RangeBonus
   - AllStatsBonus
+  - Crate
   layers:
   - Default
   - TransparentFX
@@ -26,7 +27,7 @@ TagManager:
   - Enemy
   - Ground
   - EnemyBullet
-  - MapLayer
+  - 
   - 
   - 
   - 

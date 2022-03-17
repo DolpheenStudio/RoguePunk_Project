@@ -354,7 +354,7 @@ Transform:
   m_GameObject: {fileID: 6796974802007014861}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -7.43, y: 0.25, z: -0.028291702}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.5, y: 0.7, z: 0.5}
   m_Children:
   - {fileID: 7654254502911793457}
   - {fileID: 2037772767641698469}
@@ -441,8 +441,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb4866152d02884a88012fd75be1f14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxEnemyHealth: 50
+  maxEnemyHealth: 120
   currentEnemyHealth: 0
   standardMaterial: {fileID: 2100000, guid: 35902c9f423301145995e265767083ab, type: 2}
   damageMaterial: {fileID: 2100000, guid: d9f072a575dc84e4c80d787891d670b4, type: 2}
   scrapPrefab: {fileID: 2105554380207743518, guid: 621c71de95d8b1848b20877ec23c420a, type: 3}
+  nutPrefab: {fileID: 2211769921954796433, guid: 68471f5c2af1dac4f8adab0026d15ba6, type: 3}
+  boltPrefab: {fileID: 5870310540777341274, guid: ded6f204d063d3546856bc1f5e7152ce, type: 3}

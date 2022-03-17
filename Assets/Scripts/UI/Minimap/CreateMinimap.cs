@@ -8,16 +8,6 @@ public class CreateMinimap : MonoBehaviour
     public GameObject wallPrefab;
     public GameObject minimapCamera;
     public MinimapCamera minimapCameraClass;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void GenerateMinimapField(float squareX, float squareZ)
     {

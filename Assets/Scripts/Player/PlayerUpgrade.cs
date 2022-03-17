@@ -13,6 +13,16 @@ public static class PlayerUpgrade
     public static bool playerDoubleShot {get; set;}
     public static float currentPlayerHealthStatic {get; set;} = 100f;
     public static int playerLevelIteration {get; set;}
+    public static int generatedEnemies {get; set;}
+    public static int commonGunpowder {get; set;}
+    public static int uncommonGunpowder {get; set;}
+    public static int rareGunpowder {get; set;}
+    public static int commonMetalPlate {get; set;}
+    public static int uncommonMetalPlate {get; set;}
+    public static int rareMetalPlate {get; set;}
+    public static int commonBearing {get; set;}
+    public static int uncommonBearing {get; set;}
+    public static int rareBearing {get; set;}
 
     public static void SetPlayerCurrentHealth(float currentPlayerHealth) 
     {

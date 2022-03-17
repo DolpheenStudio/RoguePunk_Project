@@ -458,6 +458,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8db976a9feaca6c42b3015806757fc42, type: 3}
+--- !u!1 &836795564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2835182056615827490, guid: 1e13e5cdf4ca48f4f9786fe0ad10de9a, type: 3}
+  m_PrefabInstance: {fileID: 1350259709}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &836795569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836795564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a34699078f083c4f8f695c9140f2aee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1001 &1350259709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -528,6 +546,14 @@ PrefabInstance:
     - target: {fileID: 4074129890671304438, guid: 1e13e5cdf4ca48f4f9786fe0ad10de9a, type: 3}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9097630921553979028, guid: 1e13e5cdf4ca48f4f9786fe0ad10de9a, type: 3}
+      propertyPath: playerDamage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9097630921553979028, guid: 1e13e5cdf4ca48f4f9786fe0ad10de9a, type: 3}
+      propertyPath: playerAttackSpeed
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 9097630921553979032, guid: 1e13e5cdf4ca48f4f9786fe0ad10de9a, type: 3}
       propertyPath: m_RootOrder

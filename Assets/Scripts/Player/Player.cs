@@ -72,6 +72,7 @@ public class Player : MonoBehaviour
 
     public void Death()
     {
+        PlayerUpgrade.generatedEnemies = 0;
         PlayerUpgrade.ResetPlayerBunus();
         SavePlayer();
         SceneManager.LoadScene("StemEncampment", LoadSceneMode.Single);
@@ -85,7 +86,7 @@ public class Player : MonoBehaviour
             playerBulletSpeed += 2f;
         }
         
-        playerAttackSpeed = 1f;
+        playerAttackSpeed = 0.4f;
         for(int i=0; i<playerAttackSpeedUpgrade; i++)
         {
             playerAttackSpeed *= 0.9f;

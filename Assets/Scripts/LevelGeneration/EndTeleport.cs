@@ -15,7 +15,7 @@ public class EndTeleport : MonoBehaviour
 
     void Update()
     {
-        if(Vector3.Distance(transform.position, player.transform.position) <= 1)
+        if(Vector3.Distance(transform.position, player.transform.position) <= 1 && PlayerUpgrade.generatedEnemies == 0)
         {
             Portal();
         }

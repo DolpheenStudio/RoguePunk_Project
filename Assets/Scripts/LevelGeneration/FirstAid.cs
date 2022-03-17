@@ -12,11 +12,6 @@ public class FirstAid : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<Player>();
-        endTeleport = FindObjectOfType<EndTeleport>();
-        if (Vector3.Distance(transform.position, player.transform.position) <= 30 || Vector3.Distance(transform.position, endTeleport.transform.position) <=3)
-        {
-            Destroy(gameObject);
-        }
     }
 
     void Update()

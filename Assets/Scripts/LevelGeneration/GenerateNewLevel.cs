@@ -25,6 +25,7 @@ public class GenerateNewLevel : MonoBehaviour
 
     void Start()
     {
+        PlayerUpgrade.generatedEnemies = 0;
         while(generatedFields <= worldSize)
         {
             do
