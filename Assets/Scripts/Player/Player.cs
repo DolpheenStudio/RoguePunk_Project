@@ -73,6 +73,7 @@ public class Player : MonoBehaviour
     public void Death()
     {
         PlayerUpgrade.generatedEnemies = 0;
+        PlayerUpgrade.SetPlayerCurrentHealth(maxPlayerHealth);
         PlayerUpgrade.ResetPlayerBunus();
         SavePlayer();
         SceneManager.LoadScene("StemEncampment", LoadSceneMode.Single);
