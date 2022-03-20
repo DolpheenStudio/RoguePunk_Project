@@ -414,6 +414,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9203365769970556984}
+  - component: {fileID: 7006017537065055029}
+  - component: {fileID: 3247088154387091}
   m_Layer: 0
   m_Name: MetalPlateModel
   m_TagString: Untagged
@@ -428,8 +430,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8427146142862932610}
-  m_LocalRotation: {x: 0, y: 0, z: -0.5735764, w: 0.8191521}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 5460978461015849821}
@@ -439,4 +441,31 @@ Transform:
   - {fileID: 28972594405565448}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -70}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7006017537065055029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8427146142862932610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9206385186a3ec488d16da3c7de5ce7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  common: {fileID: 2100000, guid: cbfaed3100d946647ab3ecf36117ec3e, type: 2}
+  uncommon: {fileID: 2100000, guid: c1e9ab1b935f11b4ab9e9e7c7934ea52, type: 2}
+  rare: {fileID: 2100000, guid: 2f3cbcc95eb555240be428cf2eee4155, type: 2}
+--- !u!114 &3247088154387091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8427146142862932610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e315fb4dc2008974c8d4a871d8d32f05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

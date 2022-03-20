@@ -171,6 +171,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7699123510858580655}
+  - component: {fileID: 5598627522080962378}
+  - component: {fileID: -891301847161897086}
   m_Layer: 0
   m_Name: GunPowderModel
   m_TagString: Untagged
@@ -186,7 +188,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7030990544501594133}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.771027, y: 0, z: -4.0158997}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 3560312100355047285}
@@ -194,3 +196,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5598627522080962378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7030990544501594133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aacce60ae88a4044ac5c10874d54d1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  common: {fileID: 2100000, guid: cbfaed3100d946647ab3ecf36117ec3e, type: 2}
+  uncommon: {fileID: 2100000, guid: c1e9ab1b935f11b4ab9e9e7c7934ea52, type: 2}
+  rare: {fileID: 2100000, guid: 2f3cbcc95eb555240be428cf2eee4155, type: 2}
+--- !u!114 &-891301847161897086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7030990544501594133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e315fb4dc2008974c8d4a871d8d32f05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

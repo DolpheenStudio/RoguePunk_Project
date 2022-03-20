@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float maxEnemyHealth = 50;
-    public float currentEnemyHealth;
+    public float currentEnemyHealth = 1;
     public Material standardMaterial;
     public Material damageMaterial;
     public GameObject scrapPrefab;
@@ -32,10 +32,6 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        if(currentEnemyHealth <= 0)
-        {
-            Death();
-        }
         if(isDamageMaterial > 0)
         {
             foreach (MeshRenderer render in GetComponentsInChildren<MeshRenderer>())
@@ -53,6 +49,14 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    void LateUpdate()
+    {
+        if(currentEnemyHealth <= 0)
+        {
+            Death();
+        }
+    }
+
     public void Damage(float playerDamage)
     {
         if(player.playerDamageCooldown <= 0)
@@ -64,7 +68,6 @@ public class Enemy : MonoBehaviour
 
     void Death()
     {
-        Destroy(gameObject);
         for(int i=0; i<(int) (Random.Range(10,15) + Random.Range(10, 15) * (PlayerUpgrade.playerLevelIteration - 1) * 0.1f); i++)
         {
             if(Random.value > 0.66) Instantiate(scrapPrefab, new Vector3(transform.position.x + Random.Range(-1f, 1f), 0.08f, transform.position.z + Random.Range(-1f, 1f)), 
@@ -75,5 +78,6 @@ public class Enemy : MonoBehaviour
                                     Quaternion.Euler(-90f, transform.rotation.y, transform.rotation.z));          
         }
         PlayerUpgrade.generatedEnemies--;
+        Destroy(gameObject);
     }
 }

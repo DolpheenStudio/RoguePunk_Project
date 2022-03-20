@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class BumperMovement : MonoBehaviour
 {
-    public Player player;
+    private Player player;
+    private Enemy enemy;
     public PlayerMovement playerController;
     public CharacterController enemyController;
+    public GameObject metalPlatePrefab;
     public float bumperSpeed = 3f;
     public float bumperDamage = 15f;
     public float bumperAttackSpeed = 1f;
@@ -17,6 +19,7 @@ public class BumperMovement : MonoBehaviour
     {
         enemyController = gameObject.GetComponent<CharacterController>();
         player = FindObjectOfType<Player>();
+        enemy = gameObject.GetComponent<Enemy>();
         playerController = FindObjectOfType<PlayerMovement>();
         bumperDamage += bumperDamage * (PlayerUpgrade.playerLevelIteration - 1) * 0.1f;
     }
@@ -39,5 +42,16 @@ public class BumperMovement : MonoBehaviour
             playerController.PlayerKnockback(transform, 0.2f);
         }
         transform.position = new Vector3(transform.position.x, 0.25f, transform.position.z);
+        if(enemy.currentEnemyHealth <= 0)
+        {
+            Death();
+        }
+    }
+    void Death()
+    {
+        if(Random.value > 0.76)
+        {
+            Instantiate(metalPlatePrefab, new Vector3(transform.position.x, 0.5f, transform.position.z), Quaternion.Euler(0f, 0f, 0f));
+        }
     }
 }

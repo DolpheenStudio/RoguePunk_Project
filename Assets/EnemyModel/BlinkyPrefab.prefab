@@ -397,6 +397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   playerController: {fileID: 0}
+  bearingPrefab: {fileID: 3519218327437595972, guid: 8ac56063e0b481f419bf33a4d3017c39, type: 3}
   blinkyDashForce: 5
   blinkyAttackSpeed: 4
   blinkyDamage: 10

@@ -378,6 +378,7 @@ MonoBehaviour:
   player: {fileID: 0}
   playerController: {fileID: 0}
   enemyController: {fileID: 0}
+  metalPlatePrefab: {fileID: 8427146142862932610, guid: e60aadd00c2256648bcf0c6aa54524f0, type: 3}
   bumperSpeed: 3
   bumperDamage: 15
   bumperAttackSpeed: 1

@@ -164,6 +164,7 @@ MonoBehaviour:
   player: {fileID: 0}
   izzyBulletPrefab: {fileID: 6027840544316589711, guid: 5bcd23681f5fdd0479692164f0904e78, type: 3}
   shootingPoint: {fileID: 4257163166041581216}
+  gunPowderPrefab: {fileID: 7030990544501594133, guid: 57ebe2d3deeee6549a64cc21d4223354, type: 3}
   izzyBulletSpeed: 10
   izzyAttackSpeed: 1
 --- !u!136 &6149197327093433641

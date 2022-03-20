@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class BlinkyMovement : MonoBehaviour
 {
-    public Player player;
+    private Player player;
+    private Enemy enemy;
     public PlayerMovement playerController;
+    public GameObject bearingPrefab;
     public float blinkyDashForce = 5f;
     public float blinkyAttackSpeed = 4f;
     public float blinkyDamage = 10f;
@@ -17,12 +19,20 @@ public class BlinkyMovement : MonoBehaviour
 
     void Start()
     {
+        enemy = gameObject.GetComponent<Enemy>();
         enemyController = gameObject.GetComponent<CharacterController>();
         player = FindObjectOfType<Player>();
         playerController = FindObjectOfType<PlayerMovement>();
         blinkyDamage += blinkyDamage * (PlayerUpgrade.playerLevelIteration - 1) * 0.1f;
     }
 
+    void Update()
+    {
+        if(enemy.currentEnemyHealth <= 0)
+        {
+            Death();
+        }
+    }
     void LateUpdate()
     {   
         if (Vector3.Distance(transform.position, player.transform.position) <= 10) 
@@ -54,5 +64,12 @@ public class BlinkyMovement : MonoBehaviour
             damageDealt = true;
         }
         transform.position = new Vector3(transform.position.x, 0.2f, transform.position.z);
+    }
+    void Death()
+    {
+        if(Random.value > 0.76)
+        {
+            Instantiate(bearingPrefab, new Vector3(transform.position.x, 0.5f, transform.position.z), Quaternion.Euler(0f, 0f, 0f));
+        }
     }
 }
