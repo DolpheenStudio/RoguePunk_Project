@@ -72,6 +72,6 @@ public class PlayerMovement : MonoBehaviour
     {
         knockBackDirection = Vector3.Scale(enemy.forward.normalized, new Vector3(1, 0, 1));
         knockBackCounter = knockBackTime;
-        knockBackForce = enemyKnockbackForce;
+        knockBackForce = enemyKnockbackForce * 2f;
     }
 }

@@ -19,7 +19,7 @@ public static class PlayerUpgrade
     {
         currentPlayerHealthStatic = currentPlayerHealth;
     }
-    public static void ResetPlayerBunus() 
+    public static void ResetPlayerBonus() 
     {
         playerBonusDamage = 0;
         playerBonusAttackSpeed = 0;
