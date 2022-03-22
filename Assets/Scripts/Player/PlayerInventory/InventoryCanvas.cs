@@ -13,11 +13,11 @@ public class InventoryCanvas : MonoBehaviour
     
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && inventoryCanvas.activeSelf)
+        if((Input.GetKeyDown(KeyCode.E) && inventoryCanvas.activeSelf) || IsGamePaused.isGamePaused || IsGamePaused.isPauseMenuOn || IsGamePaused.isSavePointOn || IsGamePaused.isUpgradeCenterOn)
         {
             inventoryCanvas.SetActive(false);
         }
-        else if(Input.GetKeyDown(KeyCode.E) && !inventoryCanvas.activeSelf)
+        else if(Input.GetKeyDown(KeyCode.E) && !inventoryCanvas.activeSelf && !IsGamePaused.isGamePaused)
         {
             inventoryCanvas.SetActive(true);
         }
