@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
         playerDamageUpgrade = 0f;
         playerAttackSpeedUpgrade = 0f;
         LoadPlayer();
+        //PlayerInventory.ResetItems();
     }
 
     public void SavePlayer() 
