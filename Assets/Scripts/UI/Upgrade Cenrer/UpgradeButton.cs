@@ -12,17 +12,6 @@ public class UpgradeButton : MonoBehaviour
         text = GetComponentInChildren<Text>();
         player = FindObjectOfType<Player>();
     }
-    void Update()
-    {
-        if(gameObject.name == "DamageButton")
-        text.text = "DAMAGE + " + player.playerDamageUpgrade;
-        if(gameObject.name == "ASButton")
-        text.text = "ATTACK SPEED + " + player.playerAttackSpeedUpgrade;
-        if(gameObject.name == "RangeButton")
-        text.text = "RANGE + " + player.playerRangeUpgrade;
-        if(gameObject.name == "BSButton")
-        text.text = "BULLET SPEED + " + player.playerBulletSpeedUpgrade;
-    }
     public void UpgradeDamage()
     {
         if(player.playerScraps >= 1000 + 100 * player.playerDamageUpgrade) 
