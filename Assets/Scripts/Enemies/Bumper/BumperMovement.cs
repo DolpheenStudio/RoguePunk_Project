@@ -9,6 +9,7 @@ public class BumperMovement : MonoBehaviour
     public PlayerMovement playerController;
     public CharacterController enemyController;
     public GameObject metalPlatePrefab;
+    public GameObject movementSphere;
     public float bumperSpeed = 3f;
     public float bumperDamage = 15f;
     public float bumperAttackSpeed = 1f;
@@ -30,6 +31,8 @@ public class BumperMovement : MonoBehaviour
         if(Vector3.Distance(transform.position, player.transform.position) <= 20)
         {
             enemyController.Move(transform.forward.normalized * bumperSpeed * Time.deltaTime);
+            movementSphere.transform.rotation = movementSphere.transform.rotation * Quaternion.Euler(0.3f, 0f, 0f  * Time.deltaTime);
+
         }
         if(nextAttack > 0)
         {

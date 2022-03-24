@@ -23,11 +23,11 @@ public class Enemy : MonoBehaviour
 
         maxEnemyHealth += maxEnemyHealth * (PlayerUpgrade.playerLevelIteration - 1) * 0.1f;
         currentEnemyHealth = maxEnemyHealth;
-        if(Vector3.Distance(transform.position, player.transform.position) <= 20 || Vector3.Distance(transform.position, endTeleport.transform.position) <=3)
+        /*if(Vector3.Distance(transform.position, player.transform.position) <= 20 || Vector3.Distance(transform.position, endTeleport.transform.position) <=3)
         {
             Destroy(gameObject);
             PlayerUpgrade.generatedEnemies--;
-        }   
+        } */ 
     }
 
     void Update()
