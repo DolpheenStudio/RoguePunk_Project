@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 8fc3b0807543748498dce038b6272078
+  - enabled: 1
     path: Assets/Scenes/StemEncampment.unity
     guid: dc890e205ac5abc429a530e59024d7be
   - enabled: 1
     path: Assets/Scenes/GeneratedLevel.unity
     guid: 3bd102899ffeaf34fbc1cf7e6bbe64f8
+  - enabled: 1
+    path: Assets/Scenes/Working Ground.unity
+    guid: 9443abf3af73c4c4594c3281bff5a477
   m_configObjects: {}
