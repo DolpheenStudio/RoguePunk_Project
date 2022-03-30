@@ -48,7 +48,7 @@ public class BlinkyMovement : MonoBehaviour
 
                 enemyController.Move(transform.forward * blinkyAttackCooldown * Time.deltaTime * blinkyDashForce);
                 blinkyAttackCooldown -= Time.deltaTime;
-                movementSphere.transform.rotation = movementSphere.transform.rotation * Quaternion.Euler(0.3f * blinkyAttackCooldown, 0f, 0f);
+                movementSphere.transform.rotation = movementSphere.transform.rotation * Quaternion.Euler(100f * blinkyAttackCooldown * Time.deltaTime, 0f, 0f);
                 if (damageDealt == false) damageCooldown = true;
                 else damageCooldown = false;
             }
@@ -62,7 +62,7 @@ public class BlinkyMovement : MonoBehaviour
         if (Vector3.Distance(transform.position, player.transform.position) <= 2 && damageCooldown == true)
         {
             player.PlayerDamage(blinkyDamage);
-            playerController.PlayerKnockback(transform, 0.2f);
+            playerController.PlayerKnockback(transform, 50f);
             damageDealt = true;
         }
         transform.position = new Vector3(transform.position.x, 0.2f, transform.position.z);

@@ -24,7 +24,7 @@ public class IzzyBulletScript : MonoBehaviour
         if (coll.gameObject.tag == "Player" && player.playerDamageCooldown <= 0)
         {
             player.PlayerDamage(izzyDamage);
-            playerController.PlayerKnockback(transform, 0.05f);
+            playerController.PlayerKnockback(transform, 50f);
         }
     }
 }

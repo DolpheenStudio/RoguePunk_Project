@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
-    guid: 8fc3b0807543748498dce038b6272078
+    guid: 3a5f92476abdcc1418a56a5a41106b6c
   - enabled: 1
     path: Assets/Scenes/StemEncampment.unity
     guid: dc890e205ac5abc429a530e59024d7be

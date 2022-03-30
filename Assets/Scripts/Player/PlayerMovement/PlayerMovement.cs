@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (render.name != "CursorModel") render.material = damageMaterial;
             }
-            controller.Move(knockBackDirection * knockBackForce * knockBackCounter);
+            controller.Move(knockBackDirection * knockBackForce * knockBackCounter * Time.deltaTime);
             knockBackCounter -= Time.deltaTime;
         }
         if(IsGamePaused.isPauseMenuOn == false && IsGamePaused.isSavePointOn == false && IsGamePaused.isUpgradeCenterOn == false)
@@ -72,6 +72,6 @@ public class PlayerMovement : MonoBehaviour
     {
         knockBackDirection = Vector3.Scale(enemy.forward.normalized, new Vector3(1, 0, 1));
         knockBackCounter = knockBackTime;
-        knockBackForce = enemyKnockbackForce * 2f;
+        knockBackForce = enemyKnockbackForce;
     }
 }

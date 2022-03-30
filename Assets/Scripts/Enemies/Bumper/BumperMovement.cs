@@ -31,7 +31,7 @@ public class BumperMovement : MonoBehaviour
         if(Vector3.Distance(transform.position, player.transform.position) <= 20)
         {
             enemyController.Move(transform.forward.normalized * bumperSpeed * Time.deltaTime);
-            movementSphere.transform.rotation = movementSphere.transform.rotation * Quaternion.Euler(0.3f, 0f, 0f  * Time.deltaTime);
+            if(!IsGamePaused.isGamePaused) movementSphere.transform.rotation = movementSphere.transform.rotation * Quaternion.Euler(100f * Time.deltaTime, 0f, 0f);
 
         }
         if(nextAttack > 0)
@@ -42,7 +42,7 @@ public class BumperMovement : MonoBehaviour
         {
             nextAttack = bumperAttackSpeed;
             player.PlayerDamage(bumperDamage);
-            playerController.PlayerKnockback(transform, 0.2f);
+            playerController.PlayerKnockback(transform, 50f);
         }
         transform.position = new Vector3(transform.position.x, 0.25f, transform.position.z);
         if(enemy.currentEnemyHealth <= 0)
