@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public float playerAttackSpeed;
     public float currentPlayerHealth;
     public int playerScraps;
+    public bool isCrushDefeated;
     public float playerDamage;
     public bool playerDoubleShot = false;
     public float playerRangeUpgrade;
@@ -47,6 +48,7 @@ public class Player : MonoBehaviour
         playerBulletSpeedUpgrade = playerData.playerBulletSpeedUpgrade;
         playerRangeUpgrade = playerData.playerRangeUpgrade;
         playerScraps = playerData.playerScraps;
+        isCrushDefeated = playerData.isCrushDefeated;
         ReloadPlayerBonus();
     }
 

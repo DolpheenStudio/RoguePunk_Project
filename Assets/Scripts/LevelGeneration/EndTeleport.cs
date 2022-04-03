@@ -23,9 +23,28 @@ public class EndTeleport : MonoBehaviour
 
     public void Portal()
     {
-        PlayerUpgrade.SetPlayerCurrentHealth(player.currentPlayerHealth);
-        SavePlayerSystem.SavePlayer(player);
-        PlayerUpgrade.playerLevelIteration++;
-        SceneManager.LoadScene("GeneratedLevel", LoadSceneMode.Single);
+        if(player.isCrushDefeated == false)
+        {
+            if(PlayerUpgrade.playerLevelIteration < 10)
+            {
+                PlayerUpgrade.SetPlayerCurrentHealth(player.currentPlayerHealth);
+                SavePlayerSystem.SavePlayer(player);
+                PlayerUpgrade.playerLevelIteration++;
+                SceneManager.LoadScene("CityOfStem", LoadSceneMode.Single);
+            }
+            else
+            {
+                PlayerUpgrade.SetPlayerCurrentHealth(player.currentPlayerHealth);
+                SavePlayerSystem.SavePlayer(player);
+                SceneManager.LoadScene("CrushArena", LoadSceneMode.Single);
+            }
+        }
+        else 
+        {
+            PlayerUpgrade.SetPlayerCurrentHealth(player.currentPlayerHealth);
+            SavePlayerSystem.SavePlayer(player);
+            PlayerUpgrade.playerLevelIteration++;
+            SceneManager.LoadScene("CityOfStemHyper", LoadSceneMode.Single);
+        }
     }
 }

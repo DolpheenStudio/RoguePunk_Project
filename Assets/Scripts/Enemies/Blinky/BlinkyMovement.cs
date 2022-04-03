@@ -9,6 +9,7 @@ public class BlinkyMovement : MonoBehaviour
     public PlayerMovement playerController;
     public GameObject bearingPrefab;
     public GameObject movementSphere;
+    public GameObject sawBlade;
     public float blinkyDashForce = 5f;
     public float blinkyAttackSpeed = 4f;
     public float blinkyDamage = 10f;
@@ -48,18 +49,24 @@ public class BlinkyMovement : MonoBehaviour
 
                 enemyController.Move(transform.forward * blinkyAttackCooldown * Time.deltaTime * blinkyDashForce);
                 blinkyAttackCooldown -= Time.deltaTime;
-                movementSphere.transform.rotation = movementSphere.transform.rotation * Quaternion.Euler(100f * blinkyAttackCooldown * Time.deltaTime, 0f, 0f);
+                movementSphere.transform.rotation = movementSphere.transform.rotation * Quaternion.Euler(0f, 0f, 100f * blinkyAttackCooldown * Time.deltaTime);
+                sawBlade.transform.rotation = sawBlade.transform.rotation * Quaternion.Euler(0f, 0f, 300f * blinkyAttackCooldown * Time.deltaTime);
                 if (damageDealt == false) damageCooldown = true;
                 else damageCooldown = false;
             }
             else
             {
                 transform.LookAt(new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z));
+                sawBlade.transform.rotation = sawBlade.transform.rotation * Quaternion.Euler(0f, 0f, 300f * (4 - blinkyAttackCooldown) * Time.deltaTime);
                 blinkyAttackCooldown -= Time.deltaTime;
                 damageCooldown = false;
             }
         }
-        if (Vector3.Distance(transform.position, player.transform.position) <= 2 && damageCooldown == true)
+        else if(blinkyAttackCooldown >= 0)
+        {
+            blinkyAttackCooldown = 0;
+        }
+        if (Vector3.Distance(transform.position, player.transform.position) <= 2.5 && damageCooldown == true)
         {
             player.PlayerDamage(blinkyDamage);
             playerController.PlayerKnockback(transform, 50f);

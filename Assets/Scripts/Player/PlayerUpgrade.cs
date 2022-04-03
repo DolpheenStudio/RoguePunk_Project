@@ -14,6 +14,7 @@ public static class PlayerUpgrade
     public static float currentPlayerHealthStatic {get; set;} = 100f;
     public static int playerLevelIteration {get; set;}
     public static int generatedEnemies {get; set;}
+    public static bool isCrushDefeated {get; set;}
 
     public static void SetPlayerCurrentHealth(float currentPlayerHealth) 
     {

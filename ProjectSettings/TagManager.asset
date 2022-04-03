@@ -15,6 +15,7 @@ TagManager:
   - RangeBonus
   - AllStatsBonus
   - Crate
+  - Crush
   layers:
   - Default
   - TransparentFX

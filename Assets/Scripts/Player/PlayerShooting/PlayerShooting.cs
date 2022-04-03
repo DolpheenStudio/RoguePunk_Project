@@ -11,7 +11,7 @@ public class PlayerShooting : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButton("Fire1") && Time.time > nextFire)
+        if (Input.GetButton("Fire1") && Time.time > nextFire && !IsGamePaused.isGamePaused)
         {
             Shoot();
             if(player.playerDoubleShot) StartCoroutine(DoubleShot());

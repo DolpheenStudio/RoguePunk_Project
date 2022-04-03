@@ -13,7 +13,7 @@ public class LowerBodySphereRotation : MonoBehaviour
 
         if (direction.magnitude >= 0.1f && !IsGamePaused.isGamePaused)
         {
-            transform.rotation = transform.rotation * Quaternion.Euler(1f, 0f, 0f  * Time.deltaTime);
+            transform.rotation = transform.rotation * Quaternion.Euler(150f  * Time.deltaTime, 0f, 0f);
         }
     }
 }

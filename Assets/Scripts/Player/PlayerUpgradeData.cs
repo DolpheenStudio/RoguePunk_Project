@@ -10,6 +10,7 @@ public class PlayerUpgradeData
     public float playerAttackSpeedUpgrade;
     public float playerBulletSpeedUpgrade;
     public int playerScraps;
+    public bool isCrushDefeated;
 
     public PlayerUpgradeData (Player player)
     {
@@ -18,5 +19,6 @@ public class PlayerUpgradeData
         playerAttackSpeedUpgrade = player.playerAttackSpeedUpgrade;
         playerBulletSpeedUpgrade = player.playerBulletSpeedUpgrade;
         playerScraps = player.playerScraps;
+        isCrushDefeated = player.isCrushDefeated;
     }
 }

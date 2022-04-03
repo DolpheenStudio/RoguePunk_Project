@@ -35,5 +35,10 @@ public class BulletScript : MonoBehaviour
             Crate crate = coll.gameObject.GetComponentInParent<Crate>();
             crate.Damage();
         }
+        if(coll.gameObject.tag == "Crush")
+        {
+            Crush crush = coll.gameObject.GetComponentInParent<Crush>();
+            crush.Damage(player.playerDamage);
+        }
     }
 }
