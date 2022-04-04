@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class GenerateField : MonoBehaviour
 {
-    public GameObject fieldPrefab;
+    public GameObject floor1Prefab;
+    public GameObject floor2Prefab;
+    public GameObject floor3Prefab;
     public GameObject wallPrefab;
     public GameObject endPortalPrefab;
     public GameObject itemSlotPrefab;
@@ -24,6 +26,7 @@ public class GenerateField : MonoBehaviour
     public int generatedEnemies;
 
     private bool itemSpawned = false;
+    private int floor;
 
     public void GenerateSquare(float squareX, float squareZ, int generatedSquares)
     {
@@ -77,24 +80,27 @@ public class GenerateField : MonoBehaviour
         }
         else 
         {
-            Instantiate(fieldPrefab, new Vector3(squareX * 5, 0f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
+            floor = Random.Range(1, 4);
+            if(floor == 1) Instantiate(floor1Prefab, new Vector3(squareX * 5, 0f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
+            else if(floor == 2) Instantiate(floor2Prefab, new Vector3(squareX * 5, 0f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
+            else if (floor == 3) Instantiate(floor3Prefab, new Vector3(squareX * 5, 0f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
 
             if (Random.value > 0.90)
             {
-                Instantiate(bumperPrefab, new Vector3(squareX * 5, 0.25f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
+                Instantiate(bumperPrefab, new Vector3(squareX * 5, 0f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
                 PlayerUpgrade.generatedEnemies++;
             }
             else if (Random.value > 0.90)
             {
-                Instantiate(izzyPrefab, new Vector3(squareX * 5, 0.25f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
+                Instantiate(izzyPrefab, new Vector3(squareX * 5, 0f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
                 PlayerUpgrade.generatedEnemies++;
             }
             else if (Random.value > 0.90)
             {
-                Instantiate(blinkyPrefab, new Vector3(squareX * 5, 0.25f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
+                Instantiate(blinkyPrefab, new Vector3(squareX * 5, 0f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
                 PlayerUpgrade.generatedEnemies++;
             }
-            else if (Random.value > 0.98)
+            else if (Random.value > 0.96)
             {
                 Instantiate(cratePrefab, new Vector3(squareX * 5, 0f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
             }
