@@ -911,6 +911,7 @@ MonoBehaviour:
   floor2Prefab: {fileID: 7208828979953331225, guid: 770ba8cdc71c76347b08a1b1ffd981f8, type: 3}
   floor3Prefab: {fileID: 3805239332874796453, guid: 293ad34e498d4754daef4bc23ae61fd7, type: 3}
   wallPrefab: {fileID: 1317652111213218213, guid: 52db4cf9751add24080ab7ddde707dfd, type: 3}
+  wall2Prefab: {fileID: 5178933929961457143, guid: cc3c21345ff64fd4099ed67bc7220f4c, type: 3}
   endPortalPrefab: {fileID: 117665792473820961, guid: 3db3cb39a54e02a4ea62c2a2833ca6ae, type: 3}
   itemSlotPrefab: {fileID: 8970787512906426480, guid: 44694dd3743f951429a830e4cee0c036, type: 3}
   bumperPrefab: {fileID: 6796974802007014861, guid: f0dcef23c5ba1de46bdd911d0c5e4541, type: 3}

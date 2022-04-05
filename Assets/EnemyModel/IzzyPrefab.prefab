@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 35902c9f423301145995e265767083ab, type: 2}
+  - {fileID: 2100000, guid: 4b3969e0161b29542bc474aae1bb3c3c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -140,7 +140,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 35902c9f423301145995e265767083ab, type: 2}
+  - {fileID: 2100000, guid: 4b3969e0161b29542bc474aae1bb3c3c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxEnemyHealth: 80
   currentEnemyHealth: 0
-  standardMaterial: {fileID: 2100000, guid: 35902c9f423301145995e265767083ab, type: 2}
+  standardMaterial: {fileID: 2100000, guid: 4b3969e0161b29542bc474aae1bb3c3c, type: 2}
   damageMaterial: {fileID: 2100000, guid: d9f072a575dc84e4c80d787891d670b4, type: 2}
   scrapPrefab: {fileID: 2105554380207743518, guid: 621c71de95d8b1848b20877ec23c420a, type: 3}
   nutPrefab: {fileID: 2211769921954796433, guid: 68471f5c2af1dac4f8adab0026d15ba6, type: 3}
@@ -341,7 +341,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 35902c9f423301145995e265767083ab, type: 2}
+  - {fileID: 2100000, guid: 4b3969e0161b29542bc474aae1bb3c3c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -422,7 +422,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 35902c9f423301145995e265767083ab, type: 2}
+  - {fileID: 2100000, guid: 4b3969e0161b29542bc474aae1bb3c3c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

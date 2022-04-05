@@ -16,11 +16,11 @@ public class Wall : MonoBehaviour
     void FixedUpdate()
     {
         if(Vector3.Distance(new Vector3(player.transform.position.x, 0f, player.transform.position.z), 
-                            new Vector3(transform.position.x, 0f, transform.position.z)) <= 15 &&
-                            ((player.transform.position.x + player.transform.position.z) <= (transform.position.x + transform.position.z)))
+                            new Vector3(transform.position.x, 0f, transform.position.z)) <= 30 &&
+                            ((player.transform.position.x + player.transform.position.z) <= (transform.position.x + transform.position.z) + 5))
         {
             transform.position = new Vector3(transform.position.x, position, transform.position.z);
-            if (position >= -4) position -= Time.deltaTime * 20f;
+            if (position >= -5) position -= Time.deltaTime * 20f;
         }
         else
         {

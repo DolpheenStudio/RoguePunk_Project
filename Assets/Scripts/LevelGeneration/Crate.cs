@@ -31,11 +31,11 @@ public class Crate : MonoBehaviour
             {
                 for(int i=0; i<(int) Random.Range(10,15); i++)
                 {
-                    if(Random.value > 0.66) Instantiate(scrapPrefab, new Vector3(transform.position.x + Random.Range(-1f, 1f), 0.08f, transform.position.z + Random.Range(-1f, 1f)), 
+                    if(Random.value > 0.66) Instantiate(scrapPrefab, new Vector3(transform.position.x + Random.Range(-1f, 1f), 0.5f, transform.position.z + Random.Range(-1f, 1f)), 
                                             Quaternion.Euler(-90f, transform.rotation.y, transform.rotation.z));
-                    else if(Random.value > 0.66) Instantiate(boltPrefab, new Vector3(transform.position.x + Random.Range(-1f, 1f), 0.08f, transform.position.z + Random.Range(-1f, 1f)), 
+                    else if(Random.value > 0.66) Instantiate(boltPrefab, new Vector3(transform.position.x + Random.Range(-1f, 1f), 0.5f, transform.position.z + Random.Range(-1f, 1f)), 
                                             Quaternion.Euler(0f, transform.rotation.y, transform.rotation.z));
-                    else Instantiate(nutPrefab, new Vector3(transform.position.x + Random.Range(-1f, 1f), 0.08f, transform.position.z + Random.Range(-1f, 1f)), 
+                    else Instantiate(nutPrefab, new Vector3(transform.position.x + Random.Range(-1f, 1f), 0.5f, transform.position.z + Random.Range(-1f, 1f)), 
                                             Quaternion.Euler(-90f, transform.rotation.y, transform.rotation.z));          
                 }
             }

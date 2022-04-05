@@ -8,6 +8,7 @@ public class GenerateField : MonoBehaviour
     public GameObject floor2Prefab;
     public GameObject floor3Prefab;
     public GameObject wallPrefab;
+    public GameObject wall2Prefab;
     public GameObject endPortalPrefab;
     public GameObject itemSlotPrefab;
     public GameObject bumperPrefab;
@@ -108,7 +109,8 @@ public class GenerateField : MonoBehaviour
     }
     public void GenerateWall(float wallX, float wallZ)
     {
-        Instantiate(wallPrefab, new Vector3(wallX * 5, 0f, wallZ * 5), Quaternion.Euler(0f, 0f, 0f));
+        if(Random.Range(1, 3) == 1) Instantiate(wallPrefab, new Vector3(wallX * 5, 0f, wallZ * 5), Quaternion.Euler(0f, 0f, 0f));
+        else Instantiate(wall2Prefab, new Vector3(wallX * 5, 0f, wallZ * 5), Quaternion.Euler(0f, 0f, 0f));
     }
     public void GenerateEnd(float endX, float endZ)
     {

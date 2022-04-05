@@ -14,10 +14,10 @@ public class Scrap : MonoBehaviour
 
     void Update()
     {
-        if(pullbackCooldown <= 0) transform.position = Vector3.MoveTowards(transform.position, player.transform.position, 12*Time.deltaTime);
+        if(pullbackCooldown <= 0) transform.position = Vector3.MoveTowards(transform.position, new Vector3(player.transform.position.x, 1f, player.transform.position.z), 12*Time.deltaTime);
         else pullbackCooldown -= Time.deltaTime;
 
-        if(Vector3.Distance(transform.position, player.transform.position) <= 0.5) 
+        if(Vector3.Distance(transform.position, player.transform.position) <= 1) 
         {
             Destroy(gameObject);
             player.playerScraps++;
