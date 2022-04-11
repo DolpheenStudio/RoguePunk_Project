@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1965472549865192034}
   - component: {fileID: 9206072194254239906}
   - component: {fileID: 2658505777616011273}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 3534818291617709653}
   - component: {fileID: 3267732839779817942}
   - component: {fileID: 1254682566570347977}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4706176774297341784}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BumperModel_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,13 +187,13 @@ Transform:
   m_GameObject: {fileID: 5333496139547121122}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8448212239958332477}
   - {fileID: 1945482612849357442}
   - {fileID: 1965472549865192034}
   - {fileID: 3534818291617709653}
-  m_Father: {fileID: 6131761112638089079}
+  m_Father: {fileID: 7350873903721610579}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &5569096930816989911
@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 8448212239958332477}
   - component: {fileID: 919655530993001123}
   - component: {fileID: 8774498883411902076}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,6 +291,7 @@ GameObject:
   - component: {fileID: 6796974802007014849}
   - component: {fileID: 6796974802007014848}
   - component: {fileID: 8947483252013245338}
+  - component: {fileID: 308341736082076418}
   m_Layer: 8
   m_Name: BumperPrefab
   m_TagString: Enemy
@@ -309,7 +310,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4706176774297341784}
+  - {fileID: 7350873903721610579}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -329,6 +330,7 @@ MonoBehaviour:
   enemyController: {fileID: 0}
   metalPlatePrefab: {fileID: 8427146142862932610, guid: e60aadd00c2256648bcf0c6aa54524f0, type: 3}
   movementSphere: {fileID: 3970470178594764581}
+  bumperModel: {fileID: 7883442493028664454}
   bumperSpeed: 3
   bumperDamage: 15
   bumperAttackSpeed: 1
@@ -399,6 +401,64 @@ CapsuleCollider:
   m_Height: 4.13
   m_Direction: 1
   m_Center: {x: 0, y: 2.29, z: 0}
+--- !u!136 &308341736082076418
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6796974802007014861}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.76
+  m_Height: 4.13
+  m_Direction: 1
+  m_Center: {x: -1, y: 1.63, z: -1}
+--- !u!1 &7883442493028664454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7350873903721610579}
+  - component: {fileID: 230492334326699330}
+  m_Layer: 0
+  m_Name: BumperModel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7350873903721610579
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7883442493028664454}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_Children:
+  - {fileID: 4706176774297341784}
+  m_Father: {fileID: 6131761112638089079}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &230492334326699330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7883442493028664454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e0e0456dba85243ae74767ed9bebae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8393619211319617203
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,7 +470,7 @@ GameObject:
   - component: {fileID: 1945482612849357442}
   - component: {fileID: 918002296613818614}
   - component: {fileID: 2681489028396818028}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BumperMovement : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class BumperMovement : MonoBehaviour
     public CharacterController enemyController;
     public GameObject metalPlatePrefab;
     public GameObject movementSphere;
+    public GameObject bumperModel;
     public float bumperSpeed = 3f;
     public float bumperDamage = 15f;
     public float bumperAttackSpeed = 1f;
@@ -27,27 +29,28 @@ public class BumperMovement : MonoBehaviour
     
     void LateUpdate()
     {
-        transform.LookAt(new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z));
-        if(Vector3.Distance(transform.position, player.transform.position) <= 10)
+        if(SceneManager.GetActiveScene().name != "StemEncampment")
         {
-            enemyController.Move(transform.forward.normalized * bumperSpeed * Time.deltaTime);
-            movementSphere.transform.rotation = movementSphere.transform.rotation * Quaternion.Euler(0f, 0f, 100f * Time.deltaTime);
+            if(Vector3.Distance(transform.position, player.transform.position) <= 10)
+            {
+                enemyController.Move(bumperModel.transform.forward.normalized * bumperSpeed * Time.deltaTime);
+                movementSphere.transform.rotation = movementSphere.transform.rotation * Quaternion.Euler(0f, 0f, 100f * Time.deltaTime);
 
-        }
-        if(nextAttack > 0)
-        {
-            nextAttack -= Time.deltaTime;
-        }
-        if (Vector3.Distance(transform.position, player.transform.position) <= 2.1 && nextAttack <= 0)
-        {
-            nextAttack = bumperAttackSpeed;
-            player.PlayerDamage(bumperDamage);
-            playerController.PlayerKnockback(transform, 50f);
-        }
-        transform.position = new Vector3(transform.position.x, 0.25f, transform.position.z);
-        if(enemy.currentEnemyHealth <= 0)
-        {
-            Death();
+            }
+            if(nextAttack > 0)
+            {
+                nextAttack -= Time.deltaTime;
+            }
+            if (Vector3.Distance(transform.position, player.transform.position) <= 2.1 && nextAttack <= 0)
+            {
+                nextAttack = bumperAttackSpeed;
+                player.PlayerDamage(bumperDamage);
+                playerController.PlayerKnockback(bumperModel.transform, 50f);
+            }
+            if(enemy.currentEnemyHealth <= 0)
+            {
+                Death();
+            }
         }
     }
     void Death()

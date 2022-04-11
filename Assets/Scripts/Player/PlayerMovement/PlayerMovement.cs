@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (render.name != "CursorModel") render.material = standardMaterial;
         }
+        Cursor.visible = false;
     }
 
     void Update()
@@ -61,11 +62,6 @@ public class PlayerMovement : MonoBehaviour
             controller.Move(knockBackDirection * knockBackForce * knockBackCounter * Time.deltaTime);
             knockBackCounter -= Time.deltaTime;
         }
-        if(IsGamePaused.isPauseMenuOn == false && IsGamePaused.isSavePointOn == false && IsGamePaused.isUpgradeCenterOn == false)
-        {
-            Cursor.visible = false;
-        }
-        else Cursor.visible = true;
     }
 
     public void PlayerKnockback(Transform enemy, float enemyKnockbackForce)

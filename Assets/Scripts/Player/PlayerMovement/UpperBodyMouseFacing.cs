@@ -12,7 +12,8 @@ public class UpperBodyMouseFacing : MonoBehaviour
     }
     void Update()
     {
-        Vector3 cursorPosition = new Vector3(cursor.transform.position.x, transform.position.y, cursor.transform.position.z);
-        transform.LookAt(cursorPosition);
+        Vector3 cursorPos = new Vector3(cursor.transform.position.x, transform.position.y, cursor.transform.position.z);
+        var targetRotation = Quaternion.LookRotation(cursorPos - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 10f * Time.deltaTime);
     }
 }

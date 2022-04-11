@@ -3144,7 +3144,7 @@ GameObject:
   - component: {fileID: 350338266271115981}
   - component: {fileID: 4696764998644735705}
   - component: {fileID: 370263249304221376}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StemEncampment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
