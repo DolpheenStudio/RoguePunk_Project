@@ -219,11 +219,11 @@ public class Crush : MonoBehaviour
     {
         for(int i=0; i < 1000; i++)
         {
-            if(Random.value > 0.66) Instantiate(scrapPrefab, new Vector3(Random.Range(-30f, 30f), 0.08f, Random.Range(-30f, 30f)), 
+            if(Random.value > 0.66) Instantiate(scrapPrefab, new Vector3(Random.Range(2.5f, 47.5f), 0.1f, Random.Range(2.5f, 47.5f)), 
                                     Quaternion.Euler(-90f, transform.rotation.y, transform.rotation.z));
-            else if(Random.value > 0.66) Instantiate(boltPrefab, new Vector3(Random.Range(-30f, 30f), 0.08f, Random.Range(-30f, 30f)), 
+            else if(Random.value > 0.66) Instantiate(boltPrefab, new Vector3(Random.Range(2.5f, 47.5f), 0.1f, Random.Range(2.5f, 47.5f)), 
                                     Quaternion.Euler(-90f, transform.rotation.y, transform.rotation.z));
-            else Instantiate(nutPrefab, new Vector3(Random.Range(-30f, 30f), 0.08f, Random.Range(-30f, 30f)), 
+            else Instantiate(nutPrefab, new Vector3(Random.Range(2.5f, 47.5f), 0.1f, Random.Range(2.5f, 47.5f)), 
                                     Quaternion.Euler(-90f, transform.rotation.y, transform.rotation.z));       
         }
         Destroy(gameObject);
