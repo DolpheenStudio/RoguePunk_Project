@@ -184,7 +184,7 @@ public class Crush : MonoBehaviour
             int attack = Random.Range(1, 4);
             if(attack == 1) dashTimer = 12f;
             else if(attack == 2) shootTimer = 7f;
-            else followTimer = 10f;
+            else followTimer = 5f;
         }
 
         transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
