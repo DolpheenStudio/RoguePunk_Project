@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BulletScript : MonoBehaviour
 {
     float distance = 0f;
     Vector3 beginPos;
     private Player player;
+    public GameObject damagePopupPrefab;
 
     void Start()
     {
@@ -24,11 +26,14 @@ public class BulletScript : MonoBehaviour
     }
     void OnCollisionEnter(Collision coll)
     {
-        Destroy(gameObject);
         if(coll.gameObject.tag == "Enemy")
         {
             Enemy enemy = coll.gameObject.GetComponentInParent<Enemy>();
             enemy.Damage(player.playerDamage);
+            GameObject damagePopup = Instantiate(damagePopupPrefab, transform.position, Quaternion.identity);
+            TextMeshPro textMesh = damagePopup.GetComponentInChildren<TextMeshPro>();
+            textMesh.SetText(player.playerDamage + "");
+
         }
         if(coll.gameObject.tag == "Crate")
         {
@@ -39,6 +44,10 @@ public class BulletScript : MonoBehaviour
         {
             Crush crush = coll.gameObject.GetComponentInParent<Crush>();
             crush.Damage(player.playerDamage);
+            GameObject damagePopup = Instantiate(damagePopupPrefab, transform.position, Quaternion.identity);
+            TextMeshPro textMesh = damagePopup.GetComponentInChildren<TextMeshPro>();
+            textMesh.SetText(player.playerDamage + "");
         }
+        Destroy(gameObject);
     }
 }

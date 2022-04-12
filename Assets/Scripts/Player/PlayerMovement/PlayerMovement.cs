@@ -27,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
         {
             if (render.name != "CursorModel") render.material = standardMaterial;
         }
-        Cursor.visible = false;
     }
 
     void Update()
