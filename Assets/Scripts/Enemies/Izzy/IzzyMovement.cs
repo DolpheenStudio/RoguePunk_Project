@@ -23,7 +23,7 @@ public class IzzyMovement : MonoBehaviour
     void LateUpdate()
     {
         
-        shootingPoint.transform.LookAt(new Vector3(player.transform.position.x, player.transform.position.y + 0.8f, player.transform.position.z));
+        shootingPoint.transform.LookAt(new Vector3(player.transform.position.x, shootingPoint.transform.position.y, player.transform.position.z));
         if (Vector3.Distance(transform.position, player.transform.position) <= 10)
         {
             if (izzyAttackCooldown <= 0)
