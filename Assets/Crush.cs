@@ -51,15 +51,15 @@ public class Crush : MonoBehaviour
         //Dash Attack
         if(dashTimer >= 9)
         {
-            sawBlade1.transform.rotation = sawBlade1.transform.rotation * Quaternion.Euler(0f, 200f * (12f - dashTimer) * Time.deltaTime, 0f);
-            sawBlade2.transform.rotation = sawBlade2.transform.rotation * Quaternion.Euler(0f, -200f * (12f - dashTimer) * Time.deltaTime, 0f);
+            sawBlade1.transform.rotation = sawBlade1.transform.rotation * Quaternion.Euler(0f, 0f, 200f * (12f - dashTimer) * Time.deltaTime);
+            sawBlade2.transform.rotation = sawBlade2.transform.rotation * Quaternion.Euler(0f, 0f,  -200f * (12f - dashTimer) * Time.deltaTime);
 
             transform.LookAt(new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z));
         }
         else if(dashTimer >=7 && dashTimer <= 9)
         {
-            sawBlade1.transform.rotation = sawBlade1.transform.rotation * Quaternion.Euler(0f, 600f * Time.deltaTime, 0f);
-            sawBlade2.transform.rotation = sawBlade2.transform.rotation * Quaternion.Euler(0f, -600f * Time.deltaTime, 0f);
+            sawBlade1.transform.rotation = sawBlade1.transform.rotation * Quaternion.Euler(0f, 0f, 600f * Time.deltaTime);
+            sawBlade2.transform.rotation = sawBlade2.transform.rotation * Quaternion.Euler(0f, 0f, -600f * Time.deltaTime);
 
             controller.Move(transform.forward * (dashTimer - 7) * Time.deltaTime * 10f);
             movementSphere.transform.rotation = movementSphere.transform.rotation * Quaternion.Euler(100f * Time.deltaTime * (dashTimer - 7), 0f, 0f);
@@ -77,8 +77,8 @@ public class Crush : MonoBehaviour
         else if(dashTimer >=5 && dashTimer <= 7)
         {
             if(dashTimer > 6.95) transform.LookAt(new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z));  
-            sawBlade1.transform.rotation = sawBlade1.transform.rotation * Quaternion.Euler(0f, 600f * Time.deltaTime, 0f);
-            sawBlade2.transform.rotation = sawBlade2.transform.rotation * Quaternion.Euler(0f, -600f * Time.deltaTime, 0f);
+            sawBlade1.transform.rotation = sawBlade1.transform.rotation * Quaternion.Euler(0f, 0f, 600f * Time.deltaTime);
+            sawBlade2.transform.rotation = sawBlade2.transform.rotation * Quaternion.Euler(0f, 0f, -600f * Time.deltaTime);
 
             controller.Move(transform.forward * (dashTimer - 5) * Time.deltaTime * 10f);
             movementSphere.transform.rotation = movementSphere.transform.rotation * Quaternion.Euler(100f * Time.deltaTime * (dashTimer - 5), 0f, 0f);
@@ -98,8 +98,8 @@ public class Crush : MonoBehaviour
         {
             if(dashTimer > 4.95) transform.LookAt(new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z));  
 
-            sawBlade1.transform.rotation = sawBlade1.transform.rotation * Quaternion.Euler(0f, 600f * Time.deltaTime, 0f);
-            sawBlade2.transform.rotation = sawBlade2.transform.rotation * Quaternion.Euler(0f, -600f * Time.deltaTime, 0f);
+            sawBlade1.transform.rotation = sawBlade1.transform.rotation * Quaternion.Euler(0f, 0f, 600f * Time.deltaTime);
+            sawBlade2.transform.rotation = sawBlade2.transform.rotation * Quaternion.Euler(0f, 0f, -600f * Time.deltaTime);
 
             controller.Move(transform.forward * (dashTimer - 3) * Time.deltaTime * 10f);
             movementSphere.transform.rotation = movementSphere.transform.rotation * Quaternion.Euler(100f * Time.deltaTime * (dashTimer - 3), 0f, 0f);
@@ -116,8 +116,8 @@ public class Crush : MonoBehaviour
         }
         else if(dashTimer >=0 && dashTimer <= 3)
         {
-            sawBlade1.transform.rotation = sawBlade1.transform.rotation * Quaternion.Euler(0f, 200f * dashTimer * Time.deltaTime, 0f);
-            sawBlade2.transform.rotation = sawBlade2.transform.rotation * Quaternion.Euler(0f, -200f * dashTimer * Time.deltaTime, 0f);
+            sawBlade1.transform.rotation = sawBlade1.transform.rotation * Quaternion.Euler(0f, 0f, 200f * dashTimer * Time.deltaTime);
+            sawBlade2.transform.rotation = sawBlade2.transform.rotation * Quaternion.Euler(0f, 0f, -200f * dashTimer * Time.deltaTime);
 
             damageDealt[0] = false;
             damageDealt[1] = false;

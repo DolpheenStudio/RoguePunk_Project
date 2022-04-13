@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6027840544316589711
+--- !u!1 &538196004065969303
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6027840544316589707}
-  - component: {fileID: 6027840544316589704}
-  - component: {fileID: 6027840544316589705}
-  - component: {fileID: 2802138841425710799}
-  - component: {fileID: 5814728452100655757}
-  - component: {fileID: -98554199711648469}
-  m_Layer: 10
-  m_Name: IzzyBulletPrefab
+  - component: {fileID: 879291296723983917}
+  - component: {fileID: 4295314002224632200}
+  - component: {fileID: 2051655824812320066}
+  m_Layer: 0
+  m_Name: IzzyBulletModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6027840544316589707
+--- !u!4 &879291296723983917
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6027840544316589711}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.497, y: 2.03, z: -2.887}
-  m_LocalScale: {x: 0.412471, y: 0.412471, z: 0.412471}
+  m_GameObject: {fileID: 538196004065969303}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.15}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 6027840544316589707}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6027840544316589704
+--- !u!33 &4295314002224632200
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6027840544316589711}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &6027840544316589705
+  m_GameObject: {fileID: 538196004065969303}
+  m_Mesh: {fileID: 2534964839176971238, guid: 99af34a6a72c0de47b49f22b17efcaa5, type: 3}
+--- !u!23 &2051655824812320066
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6027840544316589711}
+  m_GameObject: {fileID: 538196004065969303}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -62,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 49cbcabfbada3bd4d8b5b862c2605ab1, type: 2}
+  - {fileID: 2100000, guid: 4b3969e0161b29542bc474aae1bb3c3c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,6 +81,40 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6027840544316589711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6027840544316589707}
+  - component: {fileID: 2802138841425710799}
+  - component: {fileID: 5814728452100655757}
+  - component: {fileID: -98554199711648469}
+  m_Layer: 10
+  m_Name: IzzyBulletPrefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6027840544316589707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6027840544316589711}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.497, y: 2.03, z: -2.887}
+  m_LocalScale: {x: 0.412471, y: 0.412471, z: 0.412471}
+  m_Children:
+  - {fileID: 879291296723983917}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &2802138841425710799
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -112,6 +143,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e879dbcd7f01f54a8cd245599ca2b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  playerController: {fileID: 0}
+  izzyDamage: 5
 --- !u!135 &-98554199711648469
 SphereCollider:
   m_ObjectHideFlags: 0

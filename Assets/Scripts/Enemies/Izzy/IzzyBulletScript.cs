@@ -18,6 +18,11 @@ public class IzzyBulletScript : MonoBehaviour
         izzyDamage += izzyDamage * (PlayerUpgrade.playerLevelIteration - 1) * 0.1f;
     }
 
+    void Update()
+    {
+        transform.rotation *= Quaternion.Euler(0f, 300f * Time.deltaTime, 0f);
+    }
+
     void OnCollisionEnter(Collision coll)
     {
         Destroy(gameObject);
