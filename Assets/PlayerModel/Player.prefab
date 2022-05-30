@@ -8292,6 +8292,7 @@ MonoBehaviour:
   player: {fileID: 9097630921553979028}
   firePoint: {fileID: 9097630922855208656}
   bulletPrefab: {fileID: 6667937102559780789, guid: 5277d9ff9f925994382b0bbb7c3ca7dd, type: 3}
+  shotParticle: {fileID: 4271752831438493203, guid: af0d225b545ff234c880aca22879886c, type: 3}
 --- !u!1 &9097630922124160990
 GameObject:
   m_ObjectHideFlags: 0
