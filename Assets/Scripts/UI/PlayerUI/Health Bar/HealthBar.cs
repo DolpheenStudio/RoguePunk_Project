@@ -8,16 +8,11 @@ public class HealthBar : MonoBehaviour
 
     public Slider slider;
     public Image fill;
-    public Text text;
     private Player player;
 
     void Start()
     {
         player = FindObjectOfType<Player>();
-    }
-    void Update()
-    {
-        text.text = player.currentPlayerHealth + " / " + player.maxPlayerHealth;
     }
 
     public void SetMaxHealth(float health)
