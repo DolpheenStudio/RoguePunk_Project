@@ -15,19 +15,15 @@ public class CameraZoom : MonoBehaviour
     {
         if(Input.GetAxis("Mouse ScrollWheel") > 0f)
         {
-            Debug.Log("Scroll");
             if(playerCamera.fieldOfView >= minFOV)
             {
-                Debug.Log("Zoom");
                 playerCamera.fieldOfView -= Time.deltaTime * 200f;
             }
         }
         if(Input.GetAxis("Mouse ScrollWheel") < 0f)
         {
-            Debug.Log("Scroll");
             if(playerCamera.fieldOfView <= maxFOV)
             {
-                Debug.Log("Zoom");
                 playerCamera.fieldOfView += Time.deltaTime * 200f;
             }
         }

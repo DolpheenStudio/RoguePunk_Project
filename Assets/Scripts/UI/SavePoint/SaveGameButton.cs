@@ -18,6 +18,19 @@ public class SaveGameButton : MonoBehaviour
         StartCoroutine(ShowSaveInfo());
     }
 
+    public void Restart()
+    {
+        PlayerInventory.ResetItems();
+        PlayerUpgrade.isCrushDefeated = false;
+        player.isCrushDefeated = false;
+        player.playerScraps = 0;
+        player.playerAttackSpeedUpgrade = 0;
+        player.playerBulletSpeedUpgrade = 0;
+        player.playerDamageUpgrade = 0;
+        player.playerRangeUpgrade = 0;
+        player.Death();
+    }
+
     IEnumerator ShowSaveInfo()
     {
         saveInfo.SetActive(true);

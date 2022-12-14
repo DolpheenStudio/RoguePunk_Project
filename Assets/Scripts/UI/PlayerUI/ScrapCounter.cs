@@ -16,6 +16,5 @@ public class ScrapCounter : MonoBehaviour
     void Update()
     {
         text.text = "" + player.playerScraps;
-        Debug.Log(player.playerScraps);
     }
 }

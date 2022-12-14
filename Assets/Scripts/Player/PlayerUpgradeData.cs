@@ -19,6 +19,6 @@ public class PlayerUpgradeData
         playerAttackSpeedUpgrade = player.playerAttackSpeedUpgrade;
         playerBulletSpeedUpgrade = player.playerBulletSpeedUpgrade;
         playerScraps = player.playerScraps;
-        isCrushDefeated = player.isCrushDefeated;
+        isCrushDefeated = player.isCrushDefeated; 
     }
 }

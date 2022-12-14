@@ -9,6 +9,8 @@ public class BulletScript : MonoBehaviour
     Vector3 beginPos;
     private Player player;
     public GameObject damagePopupPrefab;
+    public GameObject shotParticle;
+    public GameObject bulletBreakSound;
 
     void Start()
     {
@@ -48,6 +50,8 @@ public class BulletScript : MonoBehaviour
             TextMeshPro textMesh = damagePopup.GetComponentInChildren<TextMeshPro>();
             textMesh.SetText(player.playerDamage + "");
         }
+        Instantiate(shotParticle, transform.position, transform.rotation);
+        Instantiate(bulletBreakSound, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 }

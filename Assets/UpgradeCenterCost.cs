@@ -36,7 +36,7 @@ public class UpgradeCenterCost : MonoBehaviour
             image2.GetComponent<Image>().color = white;
             image3.GetComponent<Image>().color = white;
 
-            text.text = "SCRAPS\n1200";
+            text.text = "1200 scraps";
 
             image1.GetComponentInChildren<Text>().text = "" + 5;
             image2.GetComponentInChildren<Text>().text = "" + 5;
@@ -48,7 +48,7 @@ public class UpgradeCenterCost : MonoBehaviour
             image2.GetComponent<Image>().color = white;
             image3.GetComponent<Image>().color = white;
 
-            text.text = "SCRAPS\n1400";
+            text.text = "1400 scraps";
 
             image1.GetComponentInChildren<Text>().text = "" + 10;
             image2.GetComponentInChildren<Text>().text = "" + 10;
@@ -60,7 +60,7 @@ public class UpgradeCenterCost : MonoBehaviour
             image2.GetComponent<Image>().color = green;
             image3.GetComponent<Image>().color = green;
 
-            text.text = "SCRAPS\n1600";
+            text.text = "1600 scraps";
 
             image1.GetComponentInChildren<Text>().text = "" + 2;
             image2.GetComponentInChildren<Text>().text = "" + 2;
@@ -72,7 +72,7 @@ public class UpgradeCenterCost : MonoBehaviour
             image2.GetComponent<Image>().color = green;
             image3.GetComponent<Image>().color = green;
 
-            text.text = "SCRAPS\n1800";
+            text.text = "1800 scraps";
 
             image1.GetComponentInChildren<Text>().text = "" + 5;
             image2.GetComponentInChildren<Text>().text = "" + 5;
@@ -84,7 +84,7 @@ public class UpgradeCenterCost : MonoBehaviour
             image2.GetComponent<Image>().color = blue;
             image3.GetComponent<Image>().color = blue;
 
-            text.text = "SCRAPS\n2000";
+            text.text = "2000 scraps";
 
             image1.GetComponentInChildren<Text>().text = "" + 3;
             image2.GetComponentInChildren<Text>().text = "" + 3;

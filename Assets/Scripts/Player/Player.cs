@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     public float playerAttackSpeedUpgrade;
     public float playerDamageUpgrade;
     public float playerDamageCooldown;
+    public AudioSource playerDamageSound;
 
     public HealthBar healthBar;
 
@@ -32,7 +33,6 @@ public class Player : MonoBehaviour
         playerDamageUpgrade = 0f;
         playerAttackSpeedUpgrade = 0f;
         LoadPlayer();
-        //PlayerInventory.ResetItems();
     }
 
     public void SavePlayer() 
@@ -70,6 +70,8 @@ public class Player : MonoBehaviour
         {
             currentPlayerHealth -= damage;
             playerDamageCooldown = 0.3f;
+            playerDamageSound.Play(0);
+
         }
     }
 

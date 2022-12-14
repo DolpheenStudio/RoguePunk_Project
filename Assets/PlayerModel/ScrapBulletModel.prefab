@@ -240,6 +240,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagePopupPrefab: {fileID: 2278445947756255311, guid: cfccde79256e8604f9d793881568dfad, type: 3}
+  shotParticle: {fileID: 4271752831438493203, guid: af0d225b545ff234c880aca22879886c, type: 3}
+  bulletBreakSound: {fileID: 3221762119471256341, guid: 66cc4e4721aa4e243941e9e3e7d755fa, type: 3}
 --- !u!1 &7129487656441818340
 GameObject:
   m_ObjectHideFlags: 0

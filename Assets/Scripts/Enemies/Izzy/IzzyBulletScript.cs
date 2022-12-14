@@ -20,7 +20,7 @@ public class IzzyBulletScript : MonoBehaviour
 
     void Update()
     {
-        transform.rotation *= Quaternion.Euler(0f, 300f * Time.deltaTime, 0f);
+        //transform.rotation *= Quaternion.Euler(0f, 300f * Time.deltaTime, 0f);
     }
 
     void OnCollisionEnter(Collision coll)

@@ -9,6 +9,7 @@ public class Crush : MonoBehaviour
     public float shootTimer = 0f;
     public float followTimer = 0f;
     public float crushShootingCooldown = 0.25f;
+    public GameObject bossCounter;
     public GameObject sawBlade1;
     public GameObject sawBlade2;
     public GameObject movementSphere;
@@ -226,7 +227,9 @@ public class Crush : MonoBehaviour
             else Instantiate(nutPrefab, new Vector3(Random.Range(2.5f, 47.5f), 0.1f, Random.Range(2.5f, 47.5f)), 
                                     Quaternion.Euler(-90f, transform.rotation.y, transform.rotation.z));       
         }
-        Destroy(gameObject);
         player.isCrushDefeated = true;
+        PlayerUpgrade.isCrushDefeated = true;
+        Instantiate(bossCounter, transform.position, transform.rotation);
+        Destroy(gameObject);
     }
 }

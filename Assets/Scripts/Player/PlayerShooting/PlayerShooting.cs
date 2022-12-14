@@ -7,7 +7,7 @@ public class PlayerShooting : MonoBehaviour
     public Player player;
     public Transform firePoint;
     public GameObject bulletPrefab;
-    public GameObject shotParticle;
+    public AudioSource shootingSound;
     private float nextFire = 0f;
 
     void Update()
@@ -30,9 +30,9 @@ public class PlayerShooting : MonoBehaviour
     {
         nextFire = Time.time + player.playerAttackSpeed;
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Instantiate(shotParticle, firePoint.position, firePoint.rotation);
 
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         rb.AddForce(firePoint.forward * player.playerBulletSpeed, ForceMode.VelocityChange);
+        shootingSound.Play(0);
     }
 }

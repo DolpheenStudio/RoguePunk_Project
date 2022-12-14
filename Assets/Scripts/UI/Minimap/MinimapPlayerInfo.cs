@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class MinimapPlayerInfo : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class MinimapPlayerInfo : MonoBehaviour
         }
         text.text = "Level: " + PlayerUpgrade.playerLevelIteration +
         "\nDamage: " + player.playerDamage + 
-        "\nAttack Speed: " + player.playerAttackSpeed + " per second" +
+        "\nAttack Speed: " + Math.Round(player.playerAttackSpeed, 2) +
         "\nRange: " + player.playerRange + 
         "\nBulletSpeed: " + player.playerBulletSpeed;
     }

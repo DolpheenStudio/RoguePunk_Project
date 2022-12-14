@@ -26,24 +26,21 @@ public class MetalPlate : MonoBehaviour
         }
         if(rarity == 0)
         {
-            foreach (MeshRenderer render in GetComponentsInChildren<MeshRenderer>())
-            {
-                render.material = common;
-            }
+            ParticleSystem ps = GetComponentInChildren<ParticleSystem>();
+            ParticleSystem.MainModule ma = ps.main;
+            ma.startColor = Color.white;
         }
         if(rarity == 1)
         {
-            foreach (MeshRenderer render in GetComponentsInChildren<MeshRenderer>())
-            {
-                render.material = uncommon;
-            }
+            ParticleSystem ps = GetComponentInChildren<ParticleSystem>();
+            ParticleSystem.MainModule ma = ps.main;
+            ma.startColor = Color.green;
         }
         if(rarity == 2)
         {
-            foreach (MeshRenderer render in GetComponentsInChildren<MeshRenderer>())
-            {
-                render.material = rare;
-            }
+            ParticleSystem ps = GetComponentInChildren<ParticleSystem>();
+            ParticleSystem.MainModule ma = ps.main;
+            ma.startColor = Color.blue;
         }
     }
 

@@ -108,3 +108,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51703cea69741b24b9a846c99e40f1c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teleportParticles: {fileID: 8044241657705505351, guid: 5ca895ade492be147bdb271b3f28ecdf, type: 3}

@@ -13,7 +13,6 @@ public class DamagePopup : MonoBehaviour
         transform.localScale += new Vector3(2f * Time.deltaTime, 2f * Time.deltaTime, 2f * Time.deltaTime);
 
         cooldown -= Time.deltaTime;
-        Debug.Log(cooldown);
         if(cooldown <= 0f) Destroy(gameObject);
     }
 }

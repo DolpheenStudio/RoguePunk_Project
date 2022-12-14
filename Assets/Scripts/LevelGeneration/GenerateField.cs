@@ -31,7 +31,7 @@ public class GenerateField : MonoBehaviour
 
     public void GenerateSquare(float squareX, float squareZ, int generatedSquares)
     {
-        if(generatedSquares == 100)
+        if(generatedSquares == 50)
         {
             Instantiate(itemSlotPrefab, new Vector3(squareX * 5, 0f, squareZ * 5), Quaternion.Euler(0f, 0f, 0f));
             while (itemSpawned == false)

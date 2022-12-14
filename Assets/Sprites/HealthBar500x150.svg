@@ -9,7 +9,7 @@
    id="svg5"
    inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
    sodipodi:docname="HealthBar500x150.svg"
-   inkscape:export-filename="C:\Users\jakka\Documents\GitHub\RoguePunk_Project\Assets\Sprites\Options1000x300.png"
+   inkscape:export-filename="C:\Users\jakka\Documents\GitHub\RoguePunk_Project\Assets\Sprites\MissionCenter1000x300.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -27,9 +27,9 @@
      inkscape:document-units="mm"
      showgrid="false"
      units="px"
-     inkscape:zoom="0.7402988"
-     inkscape:cx="440.36273"
-     inkscape:cy="213.42734"
+     inkscape:zoom="0.5234703"
+     inkscape:cx="426.00315"
+     inkscape:cy="233.06002"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -613,27 +613,27 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:31.9401px;line-height:1.25;font-family:sans-serif;letter-spacing:10.0612px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.13174;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="72.109306"
-       y="53.978432"
-       id="text65367"
+       style="font-style:normal;font-weight:normal;font-size:33.1552px;line-height:1.25;font-family:sans-serif;letter-spacing:10.444px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.17479;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="69.96563"
+       y="54.727264"
+       id="text37587"
        transform="scale(0.9501064,1.0525137)"><tspan
          sodipodi:role="line"
-         id="tspan65365"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.9401px;font-family:'Shadow of Xizor';-inkscape-font-specification:'Shadow of Xizor, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.13174;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="72.109306"
-         y="53.978432">OPTIONS</tspan></text>
+         id="tspan37585"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:33.1552px;font-family:'Shadow of Xizor';-inkscape-font-specification:'Shadow of Xizor, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.17479;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="69.96563"
+         y="54.727264">MISSION</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:31.9401px;line-height:1.25;font-family:sans-serif;letter-spacing:10.0612px;fill:#cea733;fill-opacity:1;stroke:#4e3f13;stroke-width:1.13174;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="74.370239"
-       y="51.697372"
+       style="font-style:normal;font-weight:normal;font-size:33.1552px;line-height:1.25;font-family:sans-serif;letter-spacing:10.444px;fill:#cea733;fill-opacity:1;stroke:#4e3f13;stroke-width:1.17479;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="73.290527"
+       y="53.046486"
        id="text11383"
        transform="scale(0.9501064,1.0525137)"><tspan
          sodipodi:role="line"
          id="tspan11381"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.9401px;font-family:'Shadow of Xizor';-inkscape-font-specification:'Shadow of Xizor, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cea733;fill-opacity:1;stroke:#4e3f13;stroke-width:1.13174;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="74.370239"
-         y="51.697372">OPTIONS</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:33.1552px;font-family:'Shadow of Xizor';-inkscape-font-specification:'Shadow of Xizor, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cea733;fill-opacity:1;stroke:#4e3f13;stroke-width:1.17479;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="73.290527"
+         y="53.046486">MISSION</tspan></text>
   </g>
 </svg>

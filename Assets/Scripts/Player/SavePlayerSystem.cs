@@ -12,7 +12,7 @@ public static class SavePlayerSystem
         string pathPlayer = Application.persistentDataPath + "/player.rp";
         FileStream stream = new FileStream(pathPlayer, FileMode.Create);
 
-        PlayerUpgradeData data = new PlayerUpgradeData(player);
+        PlayerUpgradeData data = new PlayerUpgradeData(player); 
 
         formatter.Serialize(stream, data);
         stream.Close();

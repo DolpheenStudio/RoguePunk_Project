@@ -6,6 +6,8 @@ using UnityEngine;
 public class EndTeleport : MonoBehaviour
 {
     private Player player;
+    private bool isActive = false;
+    public GameObject teleportParticles;
     
     void Start()
     {
@@ -19,13 +21,18 @@ public class EndTeleport : MonoBehaviour
         {
             Portal();
         }
+        if(PlayerUpgrade.generatedEnemies == 0 && isActive == false)
+        {
+            isActive = true;
+            Instantiate (teleportParticles, transform.position, transform.rotation);
+        }
     }
 
     public void Portal()
     {
-        if(player.isCrushDefeated == false)
+        if(PlayerUpgrade.isCrushDefeated == false)
         {
-            if(PlayerUpgrade.playerLevelIteration < 10)
+            if(PlayerUpgrade.playerLevelIteration < 5)
             {
                 PlayerUpgrade.SetPlayerCurrentHealth(player.currentPlayerHealth);
                 SavePlayerSystem.SavePlayer(player);
